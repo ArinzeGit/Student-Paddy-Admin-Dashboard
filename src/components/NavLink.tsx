@@ -25,7 +25,7 @@ const NavLink = ({ label, Icon, href }: NavLinkProps) => {
       <div
         className={`${
           isActive ? "text-[#0F7863] font-[900]" : "text-[#474747] font-[500]"
-        } text-[16px] font-montserrat leading-[1.37] flex items-center space-x-[10px] transition-all duration-300`}
+        } text-[16px] font-montserrat leading-[1.37] flex items-center space-x-[10px] transition-colors duration-300 ease-in-out`}
       >
         {Icon}
         <span>{label}</span>
