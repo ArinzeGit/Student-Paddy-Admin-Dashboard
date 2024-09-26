@@ -8,7 +8,7 @@ export default function HeaderLayout({
 }) {
   return (
     <div className="w-[97.4%] mx-[auto] h-screen flex flex-col">
-      <div className="bg-white px-[24px] py-[20px] rounded-[8px] flex justify-between mb-[12px]">
+      <div className="bg-white px-[24px] py-[20px] rounded-[8px] flex justify-between mb-[10px]">
         <div className="relative">
           <input
             placeholder="Search"
@@ -67,7 +67,7 @@ export default function HeaderLayout({
           </div>
         </div>
       </div>
-      <div className="flex-1 overflow-y-auto pt-[12px] pb-[43px] no-scrollbar">
+      <div className="flex-1 overflow-y-auto pt-[14px] pb-[43px] no-scrollbar">
         {children}
       </div>
     </div>
