@@ -9,7 +9,7 @@ interface Card2Props {
 
 const Card2 = ({ label, value, iconSrc, url }: Card2Props) => {
   return (
-    <div className="h-[150px] w-[268px] bg-[white] rounded-[8px] p-[24px] font-montserrat flex flex-col justify-between">
+    <div className="min-h-[150px] bg-[white] rounded-[8px] p-[24px] font-montserrat flex flex-col justify-between">
       <div className="flex items-start gap-[14px]">
         <Image src={iconSrc} alt="Card Icon" width={44} height={44} />
         <div className=" font-[500]">
