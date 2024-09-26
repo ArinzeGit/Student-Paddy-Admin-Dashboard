@@ -41,3 +41,18 @@ body {
   font-style: normal;
   src: url('./fonts/Montserrat-Medium.ttf') format('truetype');
 }
+
+.active{
+  background-color: #D7E6DB;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.active .nav-link-pointer svg path{
+  fill:#0F7863;
+  transition: fill 0.3s ease-in-out;
+}
+
+.active svg path{
+  stroke-width:2.5;
+  transition: stroke-width 0.3s ease-in-out;
+}

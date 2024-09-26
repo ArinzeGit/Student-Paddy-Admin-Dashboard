@@ -1,3 +1,4 @@
+import NavBar from "@/components/NavBar";
 import "./globals.css";
 export const metadata = {
   title: "Student Paddy Admin Dashboard",
@@ -11,8 +12,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="bg-[#F1F3F4]">
-        <main>{children}</main>
+      <body className="bg-[#F1F3F4] flex">
+        <nav>
+          <NavBar />
+        </nav>
+        <main className="grow">{children}</main>
       </body>
     </html>
   );
