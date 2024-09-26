@@ -13,7 +13,7 @@ export default function HeaderLayout({
           <input
             placeholder="Search"
             type="text"
-            className="text-[#2B2E48] placeholder:text-[#7D7D7D] text-[14px] font-montserrat border border-[#DCDCDD] rounded-[8px] pl-[38px] pr-[8px] py-[10px]"
+            className="text-[#2B2E48] placeholder:text-[#7D7D7D] text-[14px] font-roboto border border-[#DCDCDD] rounded-[8px] pl-[38px] pr-[8px] py-[10px]"
           />
           <div className="absolute inset-y-0 left-0 flex items-center pl-[10px] pointer-events-none">
             <svg
@@ -57,10 +57,10 @@ export default function HeaderLayout({
               alt="Unilag logo"
             />
             <div>
-              <p className="font-montserrat font-[500] text-[14px] text-[#2B2E48] leading-[1.37] mb-[2px]">
+              <p className="font-roboto font-[500] text-[14px] text-[#2B2E48] leading-[1.37] mb-[2px]">
                 University of Lagos
               </p>
-              <p className="font-montserrat font-[500] text-[10px] text-[#7D7D7D] leading-[1.37]">
+              <p className="font-roboto font-[500] text-[10px] text-[#7D7D7D] leading-[1.37]">
                 admin@unilag.edu.ng
               </p>
             </div>

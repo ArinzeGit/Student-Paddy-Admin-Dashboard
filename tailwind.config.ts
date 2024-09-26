@@ -14,7 +14,7 @@ const config: Config = {
         foreground: "var(--foreground)",
       },
       fontFamily: {
-        montserrat: ['Montserrat', 'sans-serif'],
+        roboto: ['Roboto', 'Montserrat', 'sans-serif'],
       },
       screens: {
         laptop: '1200px', 
