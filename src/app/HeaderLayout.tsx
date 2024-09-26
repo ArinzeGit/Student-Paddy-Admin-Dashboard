@@ -28,16 +28,16 @@ export default function HeaderLayout({
                 cy="9.80541"
                 r="7.49047"
                 stroke="#7D7D7D"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
               />
               <path
                 d="M15.0151 15.4043L17.9518 18.3334"
                 stroke="#7D7D7D"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
               />
             </svg>
           </div>

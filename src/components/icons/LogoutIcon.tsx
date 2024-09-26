@@ -10,9 +10,9 @@ const LogoutIcon = () => {
       <path
         d="M11.1956 3.37988C16.4976 3.37988 20.7956 7.67795 20.7956 12.9799C20.7956 18.2818 16.4976 22.5799 11.1956 22.5799M8.79557 16.8199L4.95557 12.9799M4.95557 12.9799L8.79557 9.13988M4.95557 12.9799H16.9556"
         stroke="currentColor"
-        stroke-width="1.5"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
     </svg>
   );
