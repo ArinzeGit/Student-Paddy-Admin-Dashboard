@@ -14,9 +14,10 @@ const NavBar = () => {
       <div className="space-y-[14px]">
         <Image
           src={"/images/logo-student-paddy.png"}
-          width={155.23}
+          width={156}
           height={44}
           alt="Student paddy"
+          priority
           className="ml-[34px] mr-[60.77px] mb-[39.5px]"
         />
         <NavLink Icon={<DashboardIcon />} label="Dashboard" href="/dashboard" />
