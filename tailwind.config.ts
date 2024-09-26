@@ -16,6 +16,9 @@ const config: Config = {
       fontFamily: {
         montserrat: ['Montserrat', 'sans-serif'],
       },
+      screens: {
+        laptop: '1200px', 
+      },
     },
   },
   plugins: [function ({ addUtilities }:PluginAPI) {
