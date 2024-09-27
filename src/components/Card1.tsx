@@ -14,7 +14,9 @@ const Card1 = ({ label, value, iconSrc, url, percentage }: Card1Props) => {
       <div className="flex items-start gap-[14px]">
         <Image src={iconSrc} alt="Card Icon" width={44} height={44} />
         <div className=" font-[500]">
-          <p className="text-[16px] leading-[1.37] mb-[5px]">{label}</p>
+          <p className="text-[16px] leading-[1.37] mb-[5px] tracking-1">
+            {label}
+          </p>
           <p className=" text-[24px] leading-[1.37]">{value}</p>
         </div>
       </div>
