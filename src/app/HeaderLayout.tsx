@@ -11,6 +11,7 @@ export default function HeaderLayout({
       <div className="bg-white px-[24px] py-[20px] rounded-[8px] flex justify-between mb-[10px]">
         <div className="relative">
           <input
+            name="search"
             placeholder="Search"
             type="text"
             className="text-[#2B2E48] placeholder:text-[#7D7D7D] text-[14px] font-roboto border border-[#DCDCDD] rounded-[8px] pl-[38px] pr-[8px] py-[10px]"
