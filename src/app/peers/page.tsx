@@ -1,6 +1,7 @@
 import Card1 from "@/components/Card1";
 import HeaderLayout from "../HeaderLayout";
 import Card2 from "@/components/Card2";
+import ActivePeersGraph from "@/components/graphs/ActivePeersGraph";
 
 const Peers = () => {
   return (
@@ -31,6 +32,9 @@ const Peers = () => {
           iconSrc={"/images/icon-recommended-peers.png"}
           url={"/peers/recommended-peers"}
         />
+      </div>
+      <div className="w-[66%] mt-[24px]">
+        <ActivePeersGraph />
       </div>
     </HeaderLayout>
   );
