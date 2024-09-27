@@ -19,6 +19,9 @@ const config: Config = {
       screens: {
         laptop: '1200px', 
       },
+      letterSpacing:{
+        '1': '0.01em',
+      }
     },
   },
   plugins: [function ({ addUtilities }:PluginAPI) {
