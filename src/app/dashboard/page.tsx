@@ -35,22 +35,8 @@ const Dashboard = () => {
           url={"/skill-library/earned-badges"}
         />
       </div>
-      <div className="w-[66%] p-[24px] bg-white rounded-[8px] mt-[24px]">
-        <p className="text-[21px] text-[#2B2E48] font-roboto font-[500] leading-[1.37] tracking-1">
-          Active peers
-        </p>
-        <button className="bg-[#F1F3F4] rounded-[4px] px-[3px]">
-          <span className="text-[#2B2E48] text-[12px] leading[1.37] ml-[8px]">
-            Month
-          </span>
-          <Image
-            src={"/images/icon-month-dropdown.png"}
-            alt="Month dropdown"
-            width={16}
-            height={16}
-            className="inline-block ml-[2px]"
-          />
-        </button>
+
+      <div className="w-[66%] mt-[24px]">
         <ActivePeersGraph />
       </div>
     </HeaderLayout>
