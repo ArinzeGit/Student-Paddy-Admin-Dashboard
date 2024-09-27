@@ -71,11 +71,12 @@ const ActivePeersGraph = () => {
         borderWidth: 1,
         fill: true,
         tension: 0.4,
-        pointRadius: 0,
-        pointHoverRadius: 5,
+        pointRadius: 2,
         hitRadius: 20,
         pointBackgroundColor: "#FFFFFF",
         pointBorderColor: "#5DAAEE",
+        pointHoverRadius: 4.5,
+        pointHoverBorderWidth: 2,
       },
     ],
   };
@@ -83,7 +84,12 @@ const ActivePeersGraph = () => {
   const options: ChartOptions<"line"> = {
     scales: {
       x: {
+        grid: {
+          drawTicks: false, // Disable tick marks for y-axis
+          color: "#DCE3EB",
+        },
         ticks: {
+          padding: 15,
           color: "#7D7D7D",
           font: {
             size: 14,
@@ -91,10 +97,18 @@ const ActivePeersGraph = () => {
             family: "roboto",
           },
         },
+        border: {
+          color: "#DCE3EB",
+        },
       },
       y: {
         beginAtZero: true,
+        grid: {
+          drawTicks: false, // Disable tick marks for y-axis
+          color: "#DCE3EB",
+        },
         ticks: {
+          padding: 15,
           color: "#7D7D7D",
           font: {
             size: 14,
@@ -108,6 +122,9 @@ const ActivePeersGraph = () => {
             return value;
           },
         },
+        border: {
+          color: "#DCE3EB",
+        },
       },
     },
     plugins: {
@@ -116,9 +133,9 @@ const ActivePeersGraph = () => {
       },
       tooltip: {
         displayColors: false,
-        enabled: true, // Enable or disable the tooltip
+        enabled: false, // original tooltip made invisible because I have a custom tooltop created in global.css
         mode: "index", // Determines how tooltips are displayed (e.g., 'index', 'nearest', etc.)
-        intersect: false, // Show tooltips even if not directly on a point
+        intersect: true, // Show tooltips even if not directly on a point
         backgroundColor: "#5DAAEE", // Background color of the tooltip
         bodyColor: "#FFFFFF", // Body text color
         padding: 4, // Padding inside the tooltip
@@ -132,6 +149,50 @@ const ActivePeersGraph = () => {
             const value = tooltipItem.raw as unknown as number; // Use type assertion to number
             return value >= 1000 ? value / 1000 + "k" : value.toString();
           },
+        },
+        external: function (context) {
+          // Tooltip Element
+          let tooltipEl = document.getElementById("chartjs-tooltip");
+
+          // Create element on first render
+          if (!tooltipEl) {
+            tooltipEl = document.createElement("div");
+            tooltipEl.id = "chartjs-tooltip";
+            document.body.appendChild(tooltipEl);
+          }
+
+          // Hide if no tooltip
+          const tooltipModel = context.tooltip;
+          if (tooltipModel.opacity === 0) {
+            tooltipEl.style.opacity = "0";
+            return;
+          }
+
+          // Set Text
+          if (tooltipModel.body) {
+            const bodyLines = tooltipModel.body.map((item) => item.lines);
+            tooltipEl.innerHTML = bodyLines.join("<br>"); // Join array elements with line breaks
+          }
+
+          // Position the tooltip above the point and center it
+          const position = context.chart.canvas.getBoundingClientRect();
+          const tooltipPositionX = tooltipModel.caretX; // X position of the tooltip
+          const tooltipPositionY = tooltipModel.caretY; // Y position of the tooltip
+
+          tooltipEl.style.opacity = "1";
+
+          // Calculate the tooltip's width for proper centering
+          const tooltipWidth = tooltipEl.offsetWidth;
+
+          // Position it so that it is centered above the point
+          tooltipEl.style.left =
+            position.left +
+            window.pageXOffset +
+            tooltipPositionX -
+            tooltipWidth / 2 +
+            "px";
+          tooltipEl.style.top =
+            position.top + window.pageYOffset + tooltipPositionY - 38 + "px"; // Move up from point by 25px (tooltip height) + 13px (gap)
         },
       },
     },
