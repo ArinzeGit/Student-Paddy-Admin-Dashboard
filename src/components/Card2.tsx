@@ -32,8 +32,8 @@ const Card2 = ({ label, value, iconSrc, url }: Card2Props) => {
             className="inline-block ml-[5px]"
           />
         </Link>
-        <button className="bg-[#F1F3F4] rounded-[4px] px-[3px]">
-          <span className="text-[#2B2E48] text-[12px] leading[1.37] ml-[8px]">
+        <button className="bg-[#F1F3F4] rounded-[4px] px-[3px] py-[0]">
+          <span className="text-[#2B2E48] text-[12px] font-roboto font-[400] leading[1.33] ml-[12px]">
             Month
           </span>
           <Image
@@ -41,7 +41,7 @@ const Card2 = ({ label, value, iconSrc, url }: Card2Props) => {
             alt="Month dropdown"
             width={16}
             height={16}
-            className="inline-block ml-[2px]"
+            className="inline-block ml-[4px]"
           />
         </button>
       </div>

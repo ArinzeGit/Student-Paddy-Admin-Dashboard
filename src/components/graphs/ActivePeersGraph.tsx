@@ -1,6 +1,5 @@
 "use client";
 import Image from "next/image";
-import React from "react";
 import { Line } from "react-chartjs-2";
 import {
   Chart as ChartJS,
@@ -48,7 +47,7 @@ const ActivePeersGraph = () => {
     ],
     datasets: [
       {
-        label: "Line graph",
+        label: "Number of active peers",
         data: [
           600, 800, 500, 9000, 1000, 900, 400, 28000, 20000, 42000, 7500, 30000,
         ],
@@ -204,8 +203,8 @@ const ActivePeersGraph = () => {
         <p className="text-[21px] text-[#2B2E48] font-roboto font-[500] leading-[1.37] tracking-1">
           Active peers
         </p>
-        <button className="bg-[#F1F3F4] rounded-[4px] px-[3px]">
-          <span className="text-[#2B2E48] text-[12px] leading[1.37] ml-[8px]">
+        <button className="bg-[#F1F3F4] rounded-[4px] px-[3px] py-[0]">
+          <span className="text-[#2B2E48] text-[12px] font-roboto font-[400] leading[1.33] ml-[12px]">
             Month
           </span>
           <Image
@@ -213,14 +212,14 @@ const ActivePeersGraph = () => {
             alt="Month dropdown"
             width={16}
             height={16}
-            className="inline-block ml-[2px]"
+            className="inline-block ml-[4px]"
           />
         </button>
       </div>
-      <div className=" w-[76px] flex justify-between items-center mb-[22px]">
+      <div className=" flex items-center mb-[5px] gap-[8px]">
         <div className="w-[10px] h-[10px] rounded-xl bg-[#0F7863]"></div>
         <p className="text-[12px] text-[#2B2E48] font-roboto font-[400] leading-[1.37]">
-          Line graph
+          Number of active peers
         </p>
       </div>
       <Line data={data} options={options} />
