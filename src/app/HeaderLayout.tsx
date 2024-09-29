@@ -64,7 +64,7 @@ const HeaderLayout = ({ children }: { children: React.ReactNode }) => {
           </div>
         </div>
       </div>
-      <div className="flex-1 overflow-y-auto pt-[14px] pb-[43px] no-scrollbar">
+      <div className="overflow-y-auto pt-[14px] pb-[43px] no-scrollbar">
         {children}
       </div>
     </div>
