@@ -151,12 +151,12 @@ const ActivePeersGraph = () => {
         },
         external: function (context) {
           // Tooltip Element
-          let tooltipEl = document.getElementById("chartjs-tooltip");
+          let tooltipEl = document.getElementById("active-peers-tooltip");
 
           // Create element on first render
           if (!tooltipEl) {
             tooltipEl = document.createElement("div");
-            tooltipEl.id = "chartjs-tooltip";
+            tooltipEl.id = "active-peers-tooltip";
             document.body.appendChild(tooltipEl);
           }
 
