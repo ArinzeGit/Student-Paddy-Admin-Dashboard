@@ -133,7 +133,7 @@ const UniversityPeerGrowthGraph = () => {
             return value.toString(); // Converts the number to a string for display
           },
         },
-        external: function (context: { tooltip: Tooltip }) {
+        external: function (context) {
           // Tooltip Element
           let tooltipEl = document.getElementById("uni-peer-growth-tooltip");
 
