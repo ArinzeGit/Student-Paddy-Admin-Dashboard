@@ -1,6 +1,7 @@
 import Card1 from "@/components/Card1";
 import HeaderLayout from "../HeaderLayout";
 import Card2 from "@/components/Card2";
+import SkillsContentConsumptionGraph from "@/components/graphs/SkillsContentConsumptionGraph";
 
 const SkillLibrary = () => {
   return (
@@ -32,6 +33,10 @@ const SkillLibrary = () => {
           iconSrc={"/images/icon-earned-badges.png"}
           url={"/skill-library/earned-badges"}
         />
+      </div>
+
+      <div className="w-[100%] mt-[24px]">
+        <SkillsContentConsumptionGraph />
       </div>
     </HeaderLayout>
   );

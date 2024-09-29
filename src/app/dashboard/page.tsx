@@ -1,8 +1,8 @@
 import Card1 from "@/components/Card1";
 import HeaderLayout from "../HeaderLayout";
 import Card2 from "@/components/Card2";
-import Image from "next/image";
 import ActivePeersGraph from "@/components/graphs/ActivePeersGraph";
+import SkillsContentConsumptionGraph from "@/components/graphs/SkillsContentConsumptionGraph";
 
 const Dashboard = () => {
   return (
@@ -38,6 +38,10 @@ const Dashboard = () => {
 
       <div className="w-[66%] mt-[24px]">
         <ActivePeersGraph />
+      </div>
+
+      <div className="w-[100%] mt-[24px]">
+        <SkillsContentConsumptionGraph />
       </div>
     </HeaderLayout>
   );
