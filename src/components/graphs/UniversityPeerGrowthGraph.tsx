@@ -11,6 +11,7 @@ import {
   Tooltip,
   Legend,
   TooltipItem,
+  ChartOptions,
 } from "chart.js";
 import { Line } from "react-chartjs-2";
 
@@ -76,7 +77,7 @@ const UniversityPeerGrowthGraph = () => {
     ],
   };
 
-  const options = {
+  const options: ChartOptions<"line"> = {
     scales: {
       x: {
         grid: {
@@ -96,7 +97,6 @@ const UniversityPeerGrowthGraph = () => {
         beginAtZero: true,
         grid: {
           color: "#EBEDF4",
-          drawBorder: false,
         },
         ticks: {
           color: "#7D7D7D",
