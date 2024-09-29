@@ -1,10 +1,10 @@
-import HeaderLayout from "../HeaderLayout";
+import EntryPageLayout from "../EntryPageLayout";
 
 const Integrations = () => {
   return (
-    <HeaderLayout>
+    <EntryPageLayout>
       <div>Integrations</div>
-    </HeaderLayout>
+    </EntryPageLayout>
   );
 };
 

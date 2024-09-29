@@ -1,11 +1,11 @@
 import Card1 from "@/components/Card1";
-import HeaderLayout from "../HeaderLayout";
+import EntryPageLayout from "../EntryPageLayout";
 import Card2 from "@/components/Card2";
 import SkillsContentConsumptionGraph from "@/components/graphs/SkillsContentConsumptionGraph";
 
 const SkillLibrary = () => {
   return (
-    <HeaderLayout>
+    <EntryPageLayout>
       <div className="grid grid-cols-2 laptop:grid-cols-4 gap-x-[2.1%] gap-y-[24px]">
         <Card1
           label={"Total videos"}
@@ -38,7 +38,7 @@ const SkillLibrary = () => {
       <div className="w-[100%] mt-[24px]">
         <SkillsContentConsumptionGraph />
       </div>
-    </HeaderLayout>
+    </EntryPageLayout>
   );
 };
 

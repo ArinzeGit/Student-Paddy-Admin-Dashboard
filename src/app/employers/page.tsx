@@ -1,10 +1,10 @@
-import HeaderLayout from "../HeaderLayout";
+import EntryPageLayout from "../EntryPageLayout";
 
 const Employers = () => {
   return (
-    <HeaderLayout>
+    <EntryPageLayout>
       <div>Employers</div>
-    </HeaderLayout>
+    </EntryPageLayout>
   );
 };
 

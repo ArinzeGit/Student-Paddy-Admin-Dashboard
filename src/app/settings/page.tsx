@@ -1,10 +1,10 @@
-import HeaderLayout from "../HeaderLayout";
+import EntryPageLayout from "../EntryPageLayout";
 
 const Settings = () => {
   return (
-    <HeaderLayout>
+    <EntryPageLayout>
       <div>Settings</div>
-    </HeaderLayout>
+    </EntryPageLayout>
   );
 };
 

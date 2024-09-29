@@ -1,7 +1,7 @@
 import "./globals.css";
 import Image from "next/image";
 
-const HeaderLayout = ({ children }: { children: React.ReactNode }) => {
+const EntryPageLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <div className="w-[97.4%] mx-[auto] h-screen flex flex-col">
       <div className="bg-white px-[24px] py-[20px] rounded-[8px] flex justify-between mb-[10px]">
@@ -71,4 +71,4 @@ const HeaderLayout = ({ children }: { children: React.ReactNode }) => {
   );
 };
 
-export default HeaderLayout;
+export default EntryPageLayout;

@@ -1,10 +1,10 @@
-import HeaderLayout from "../HeaderLayout";
+import EntryPageLayout from "../EntryPageLayout";
 
 const Logout = () => {
   return (
-    <HeaderLayout>
+    <EntryPageLayout>
       <div>Logout</div>
-    </HeaderLayout>
+    </EntryPageLayout>
   );
 };
 

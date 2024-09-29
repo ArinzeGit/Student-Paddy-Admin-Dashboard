@@ -1,12 +1,12 @@
 import Card1 from "@/components/Card1";
-import HeaderLayout from "../HeaderLayout";
+import EntryPageLayout from "../EntryPageLayout";
 import Card2 from "@/components/Card2";
 import ActivePeersGraph from "@/components/graphs/ActivePeersGraph";
 import UniversityPeerGrowthGraph from "@/components/graphs/UniversityPeerGrowthGraph";
 
 const Peers = () => {
   return (
-    <HeaderLayout>
+    <EntryPageLayout>
       <div className="grid grid-cols-2 laptop:grid-cols-4 gap-x-[2.1%] gap-y-[24px]">
         <Card1
           label={"Total peers"}
@@ -42,7 +42,7 @@ const Peers = () => {
       <div className="w-[66%] mt-[24px]">
         <ActivePeersGraph />
       </div>
-    </HeaderLayout>
+    </EntryPageLayout>
   );
 };
 
