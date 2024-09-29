@@ -185,29 +185,56 @@ const UniversityPeerGrowthGraph = () => {
 
   return (
     <div className="w-[100%] p-[24px] bg-white rounded-[8px]">
-      <div className="flex justify-between items-start mb-[12px]">
-        <p className="text-[21px] text-[#31394D] font-roboto font-[500] leading-[1.37] tracking-1">
-          University Peer Growth
-        </p>
-        <button className="bg-[#F1F3F4] rounded-[4px] px-[3px] py-[0]">
-          <span className="text-[#2B2E48] text-[12px] font-roboto font-[400] leading[1.33] ml-[12px]">
-            Month
+      <div className="flex justify-between items-center mb-[16px]">
+        <div className=" flex items-center gap-[20px]">
+          <p className="text-[21px] text-[#31394D] font-roboto font-[500] leading-[1.37] tracking-1">
+            University Peer Growth
+          </p>
+          <div className="flex items-center gap-[10px]">
+            <div className="w-[27px] h-[13px] rounded-xl bg-[#E5E9F2]"></div>
+            <p className="text-[12px] text-[#000000] font-roboto font-[400] leading-[1.92]">
+              Graduate
+            </p>
+            <div className="w-[27px] h-[13px] rounded-xl bg-[#4072EE]"></div>
+            <p className="text-[12px] text-[#000000] font-roboto font-[400] leading-[1.92]">
+              Undergraduate
+            </p>
+          </div>
+        </div>
+        <div>
+          <span className="text-[#748AA1] text-[14px] font-roboto font-[400] leading[1.72] mr-[12px]">
+            from
           </span>
-          <Image
-            src={"/images/icon-month-dropdown.png"}
-            alt="Month dropdown"
-            width={16}
-            height={16}
-            className="inline-block ml-[4px]"
-          />
-        </button>
+          <button className="mr-[12px]">
+            <span className="text-[#31394D] text-[14px] font-roboto font-[400] leading[1.72] mr-[12px]">
+              August 2018
+            </span>
+            <Image
+              src={"/images/icon-triangle-down.png"}
+              alt="Dropdown"
+              width={9.5}
+              height={9.5}
+              className="inline-block ml-[4px]"
+            />
+          </button>
+          <span className="text-[#748AA1] text-[14px] font-roboto font-[400] leading[1.72] mr-[12px]">
+            to
+          </span>
+          <button className="mr-[12px]">
+            <span className="text-[#31394D] text-[14px] font-roboto font-[400] leading[1.72] mr-[12px]">
+              May 2019
+            </span>
+            <Image
+              src={"/images/icon-triangle-down.png"}
+              alt="Dropdown"
+              width={9.5}
+              height={9.5}
+              className="inline-block ml-[4px]"
+            />
+          </button>
+        </div>
       </div>
-      <div className=" flex items-center mb-[5px] gap-[8px]">
-        <div className="w-[10px] h-[10px] rounded-xl bg-[#0F7863]"></div>
-        <p className="text-[12px] text-[#2B2E48] font-roboto font-[400] leading-[1.37]">
-          Number of active peers
-        </p>
-      </div>{" "}
+
       <Line data={data} options={options} />
     </div>
   );
