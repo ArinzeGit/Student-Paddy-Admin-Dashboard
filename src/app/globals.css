@@ -86,7 +86,7 @@ body {
 }
 
 /* for graph tooltip of ActivePeersGraph.tsx */
-#chartjs-tooltip {
+#active-peers-tooltip {
   position: absolute;
   background: #5DAAEE;
   color: #FFFFFF;
@@ -105,7 +105,7 @@ body {
   font-weight: 500;
 }
 
-#chartjs-tooltip::after {
+#active-peers-tooltip::after {
   content: '';
   position: absolute;
   bottom: -4px; /* Position below the tooltip */
@@ -116,4 +116,38 @@ body {
   border-left: 4.5px solid transparent;
   border-right: 4.5px solid transparent;
   border-top: 4px solid #5DAAEE; /* Triangle color matches the tooltip background */
+}
+
+
+#uni-peer-growth-tooltip {
+  position: absolute;
+  background: #FFFFFF;
+  color: #31394D;
+  padding: 4px;
+  pointer-events: none;
+  border-radius: 4px;
+  transition: all 0.1s ease;
+  width: 97px; /* Set width to 60px */
+  height: 53px; /* Set height to 25px */
+  display: flex;
+  align-items: center; /* Center the content vertically */
+  justify-content: center; /* Center the content horizontally */
+  text-align: center; /* Ensure text is centered */
+  font-size: 14px; /* Adjust font size to fit the small tooltip */
+  font-family: roboto;
+  font-weight: 500;
+  box-shadow: 0px 5px 10px 0px #CBD1DF80;
+}
+
+#uni-peer-growth-tooltip::after {
+  content: '';
+  position: absolute;
+  bottom: -4px; /* Position below the tooltip */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 4.5px solid transparent;
+  border-right: 4.5px solid transparent;
+  border-top: 4px solid #FFFFFF; /* Triangle color matches the tooltip background */
 }

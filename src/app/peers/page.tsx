@@ -2,6 +2,7 @@ import Card1 from "@/components/Card1";
 import HeaderLayout from "../HeaderLayout";
 import Card2 from "@/components/Card2";
 import ActivePeersGraph from "@/components/graphs/ActivePeersGraph";
+import UniversityPeerGrowthGraph from "@/components/graphs/UniversityPeerGrowthGraph";
 
 const Peers = () => {
   return (
@@ -33,6 +34,11 @@ const Peers = () => {
           url={"/peers/recommended-peers"}
         />
       </div>
+
+      <div className="w-[100%] mt-[24px]">
+        <UniversityPeerGrowthGraph />
+      </div>
+
       <div className="w-[66%] mt-[24px]">
         <ActivePeersGraph />
       </div>
