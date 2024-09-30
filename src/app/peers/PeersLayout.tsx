@@ -2,6 +2,7 @@ import "@/app/globals.css";
 import CustomLink from "@/components/CustomLink";
 import PeersIcon from "@/components/icons/PeersIcon";
 import Image from "next/image";
+import Link from "next/link";
 
 const PeersLayout = ({ children }: { children: React.ReactNode }) => {
   return (
@@ -11,14 +12,17 @@ const PeersLayout = ({ children }: { children: React.ReactNode }) => {
           <PeersIcon />
           Peers
         </span>
-        <button className="w-[50px] h-[50px] flex items-center justify-center bg-[#21332E]">
+        <Link
+          href={"/peers"}
+          className="w-[50px] h-[50px] flex items-center justify-center bg-[#21332E]"
+        >
           <Image
             src={"/images/icon-close.png"}
             width={21}
             height={21}
             alt="Close"
           />
-        </button>
+        </Link>
       </div>
 
       <div className="w-[97.4%] mx-[auto] mb-[14px] mt-[24px] flex gap-[14px]">
