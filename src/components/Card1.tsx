@@ -20,9 +20,11 @@ const Card1 = ({ label, value, iconSrc, url, percentage }: Card1Props) => {
           <p className=" text-[24px] leading-[1.37]">{value}</p>
         </div>
       </div>
-      <div className="flex justify-between items-center font-[400] text-[14px] leading-[1.43]">
+      <div className="flex justify-between items-center">
         <Link href={url}>
-          <span className="text-[#0F7863] ">View All</span>
+          <span className="text-[#0F7863] font-[400] text-[14px] leading-[1.43]">
+            View All
+          </span>
           <Image
             src={"/images/icon-view-all.png"}
             alt="View all"
@@ -39,7 +41,9 @@ const Card1 = ({ label, value, iconSrc, url, percentage }: Card1Props) => {
             height={14}
             className="inline-block mr-[4px]"
           />
-          <span className="text-[#0B8A00]">{`${percentage.toFixed(1)}%`}</span>
+          <span className="text-[#0B8A00] font-[400] text-[14px] leading-[1.43]">{`${percentage.toFixed(
+            1
+          )}%`}</span>
         </div>
       </div>
     </div>
