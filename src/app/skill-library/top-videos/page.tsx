@@ -1,13 +1,7 @@
-import Card1 from "@/components/Card1";
-import EntryPageLayout from "../EntryPageLayout";
-import Card2 from "@/components/Card2";
-import SkillsContentConsumptionGraph from "@/components/graphs/SkillsContentConsumptionGraph";
+import SkillLlibraryLayout from "../SkillLibraryLayout";
 import Table from "@/components/Table";
-import Link from "next/link";
-import Image from "next/image";
-import UploadVideoLink from "@/components/UploadVideoLink";
 
-const SkillLibrary = () => {
+const TopVideos = () => {
   const topVideosColumns = [
     "Name of video",
     "Competency",
@@ -102,74 +96,17 @@ const SkillLibrary = () => {
     },
   ];
 
-  function getTop6Videos(data: { [key: string]: any }[]) {
-    return data.slice(0, 6); // Get the first 6 items
-  }
-
-  const top6VideosData = getTop6Videos(topVideosData);
-
   return (
-    <EntryPageLayout>
-      <div className="grid grid-cols-2 laptop:grid-cols-4 gap-x-[2.1%] gap-y-[24px]">
-        <Card1
-          label={"Total videos"}
-          value={"1,600"}
-          iconSrc={"/images/icon-total-videos.png"}
-          url={"/skill-library/total-videos"}
-          percentage={10}
-        />
-        <Card1
-          label={"Total competencies"}
-          value={"456"}
-          iconSrc={"/images/icon-total-competencies.png"}
-          url={"/skill-library/total-competencies"}
-          percentage={10}
-        />
-        <Card2
-          label={"Up-skilling time"}
-          value={"11,096 hrs"}
-          iconSrc={"/images/icon-up-skilling-time.png"}
-          url={"/skill-library/up-skilling-time"}
-        />
-        <Card2
-          label={"Earned badges"}
-          value={"1,100"}
-          iconSrc={"/images/icon-earned-badges.png"}
-          url={"/skill-library/earned-badges"}
-        />
-      </div>
-
-      <div className="w-[100%] mt-[24px]">
-        <SkillsContentConsumptionGraph />
-      </div>
-
-      <div className="w-[100%] mt-[24px] pb-[27px] bg-white rounded-[8px] relative">
+    <SkillLlibraryLayout>
+      <div className="w-[100%]">
         <Table
-          title="Top Videos"
+          title="Top Videos - 20"
           columns={topVideosColumns}
-          data={top6VideosData}
+          data={topVideosData}
         />
-        <Link
-          href={"/skill-library/top-videos"}
-          className="absolute bottom-[16px] left-[50%] translate-x-[-50%]"
-        >
-          <span className="text-[#0F7863] font-roboto font-[400] text-[14px] leading-[1.43]">
-            See full table
-          </span>
-          <Image
-            src={"/images/icon-view-all.png"}
-            alt="View all"
-            width={16}
-            height={16}
-            className="inline-block ml-[5px]"
-          />
-        </Link>
-        <div className="absolute top-[17px] right-[24px]">
-          <UploadVideoLink />
-        </div>
       </div>
-    </EntryPageLayout>
+    </SkillLlibraryLayout>
   );
 };
 
-export default SkillLibrary;
+export default TopVideos;
