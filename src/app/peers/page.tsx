@@ -6,6 +6,7 @@ import UniversityPeerGrowthGraph from "@/components/graphs/UniversityPeerGrowthG
 import Table from "@/components/Table";
 import Link from "next/link";
 import Image from "next/image";
+import TopPeerByActivityCard from "@/components/TopPeerByActivityCard";
 
 const Peers = () => {
   const topPeersColumns = [
@@ -195,8 +196,11 @@ const Peers = () => {
         <UniversityPeerGrowthGraph />
       </div>
 
-      <div className="w-[66%] mt-[24px]">
-        <ActivePeersGraph />
+      <div className="mt-[24px] flex gap-[2.1%] items-start">
+        <div className="flex-1 min-w-[375px]">
+          <ActivePeersGraph />
+        </div>
+        <TopPeerByActivityCard />
       </div>
 
       <div className="w-[100%] mt-[24px] pb-[27px] bg-white rounded-[8px] relative">

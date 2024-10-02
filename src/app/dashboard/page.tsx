@@ -3,6 +3,7 @@ import EntryPageLayout from "../EntryPageLayout";
 import Card2 from "@/components/Card2";
 import ActivePeersGraph from "@/components/graphs/ActivePeersGraph";
 import SkillsContentConsumptionGraph from "@/components/graphs/SkillsContentConsumptionGraph";
+import TopPeerByActivityCard from "@/components/TopPeerByActivityCard";
 
 const Dashboard = () => {
   return (
@@ -36,10 +37,12 @@ const Dashboard = () => {
         />
       </div>
 
-      <div className="w-[66%] mt-[24px]">
-        <ActivePeersGraph />
+      <div className="mt-[24px] flex gap-[2.1%] items-start">
+        <div className="flex-1 min-w-[375px]">
+          <ActivePeersGraph />
+        </div>
+        <TopPeerByActivityCard />
       </div>
-
       <div className="w-[100%] mt-[24px]">
         <SkillsContentConsumptionGraph />
       </div>
