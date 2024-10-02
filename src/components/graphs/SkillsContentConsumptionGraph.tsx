@@ -105,7 +105,7 @@ const SkillsContentConsumptionGraph = () => {
         <p className="text-[21px] text-[#2B2E48] font-roboto font-[500] leading-[1.37] tracking-1">
           Skills content consumption
         </p>
-        <div className="">
+        <div>
           <button>
             <Image
               src={"/images/icon-arrow-left.png"}
