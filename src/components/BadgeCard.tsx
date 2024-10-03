@@ -20,7 +20,7 @@ const BadgeCard = ({ iconSrc, label, badgeSrc }: BadgeCardProps) => {
     <div>
       <div className="bg-white rounded-[8px] py-[23px] pl-[24px] pr-[36px] flex justify-between items-center">
         <div className="flex items-center gap-[10px] text-[#000000] text-[20px] font-roboto font-[500] leading-[1.37]">
-          <Image src={iconSrc} alt="Level 1 badge" height={44} width={44} />
+          <Image src={iconSrc} alt="Badge icon" height={44} width={44} />
           <p>{label}</p>
         </div>
         <button
