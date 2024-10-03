@@ -15,6 +15,7 @@ import {
   ChartOptions,
   TooltipItem,
 } from "chart.js";
+import MonthDropdown from "../MonthDropdown";
 
 // Register chart.js components
 ChartJS.register(
@@ -203,18 +204,7 @@ const ActivePeersGraph = () => {
         <p className="text-[21px] text-[#2B2E48] font-roboto font-[500] leading-[1.37] tracking-1">
           Active peers
         </p>
-        <button className="bg-[#F1F3F4] rounded-[4px] px-[3px] py-[0]">
-          <span className="text-[#2B2E48] text-[12px] font-roboto font-[400] leading[1.33] ml-[12px]">
-            Month
-          </span>
-          <Image
-            src={"/images/icon-month-dropdown.png"}
-            alt="Month dropdown"
-            width={16}
-            height={16}
-            className="inline-block ml-[4px]"
-          />
-        </button>
+        <MonthDropdown label="Month" />
       </div>
       <div className=" flex items-center mb-[5px] gap-[8px]">
         <div className="w-[10px] h-[10px] rounded-xl bg-[#0F7863]"></div>

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import MonthDropdown from "./MonthDropdown";
 interface Card2Props {
   label: string;
   value: string;
@@ -32,18 +33,7 @@ const Card2 = ({ label, value, iconSrc, url }: Card2Props) => {
             className="inline-block ml-[5px]"
           />
         </Link>
-        <button className="bg-[#F1F3F4] rounded-[4px] px-[3px] py-[0]">
-          <span className="text-[#2B2E48] text-[12px] font-roboto font-[400] leading[1.33] ml-[12px]">
-            Month
-          </span>
-          <Image
-            src={"/images/icon-month-dropdown.png"}
-            alt="Month dropdown"
-            width={16}
-            height={16}
-            className="inline-block ml-[4px]"
-          />
-        </button>
+        <MonthDropdown label="Month" />
       </div>
     </div>
   );

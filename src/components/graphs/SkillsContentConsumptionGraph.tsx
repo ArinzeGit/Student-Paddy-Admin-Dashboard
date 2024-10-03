@@ -11,6 +11,7 @@ import {
   Legend,
   ChartOptions,
 } from "chart.js";
+import MonthDropdown from "../MonthDropdown";
 
 // Register the necessary chart components
 ChartJS.register(
@@ -105,14 +106,13 @@ const SkillsContentConsumptionGraph = () => {
         <p className="text-[21px] text-[#2B2E48] font-roboto font-[500] leading-[1.37] tracking-1">
           Skills content consumption
         </p>
-        <div>
+        <div className="flex items-center">
           <button>
             <Image
               src={"/images/icon-arrow-left.png"}
               alt="Arrow left"
               width={24}
               height={24}
-              className="inline-block"
             />
           </button>
           <button>
@@ -121,21 +121,12 @@ const SkillsContentConsumptionGraph = () => {
               alt="Arrow right"
               width={24}
               height={24}
-              className="inline-block ml-[7px]"
+              className="ml-[7px]"
             />
           </button>
-          <button className="bg-[#F1F3F4] rounded-[4px] px-[3px] py-[0] ml-[16px]">
-            <span className="text-[#2B2E48] text-[12px] font-roboto font-[400] leading[1.33] ml-[12px]">
-              March 2023
-            </span>
-            <Image
-              src={"/images/icon-month-dropdown.png"}
-              alt="Month dropdown"
-              width={16}
-              height={16}
-              className="inline-block ml-[4px]"
-            />
-          </button>
+          <div className="ml-[16px]">
+            <MonthDropdown label="March 2023" />
+          </div>
         </div>
       </div>
       <div className=" flex items-center mb-[5px] gap-[8px]">
