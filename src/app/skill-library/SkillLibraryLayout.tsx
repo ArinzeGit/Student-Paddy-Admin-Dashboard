@@ -5,7 +5,7 @@ import UploadVideoLink from "@/components/UploadVideoLink";
 import Image from "next/image";
 import Link from "next/link";
 
-const PeersLayout = ({ children }: { children: React.ReactNode }) => {
+const SkillLlibraryLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <div className="h-screen flex flex-col">
       <div className="bg-[#354B45] flex items-center justify-between">
@@ -53,4 +53,4 @@ const PeersLayout = ({ children }: { children: React.ReactNode }) => {
   );
 };
 
-export default PeersLayout;
+export default SkillLlibraryLayout;
