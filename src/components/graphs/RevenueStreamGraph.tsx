@@ -2,6 +2,8 @@
 
 import React, { useEffect } from "react";
 import * as d3 from "d3";
+import Link from "next/link";
+import RevenueStreamIcon from "../icons/RevenueStreamIcon";
 
 // Define the type for the data points
 interface DataPoint {
@@ -142,7 +144,7 @@ const RevenueStreamGraph = () => {
         </div>
       </div>
       <div className="relative">
-        <div className="flex items-center gap-[10px] absolute left-[44%] translate-x-[-50%] bottom-[-33px]">
+        <div className="flex items-center gap-[10px] absolute left-[44%] translate-x-[-50%] top-[10px]">
           <div className="w-[27px] h-[13px] rounded-xl bg-[#0F7863]"></div>
           <p className="text-[12px] text-[#000000] font-roboto font-[400] leading-[1.92] tracking-[0.5px]">
             Potential Earning 55%
@@ -152,6 +154,13 @@ const RevenueStreamGraph = () => {
             Total Paid 44%
           </p>
         </div>
+        <Link
+          href={""}
+          className="absolute right-[0] top-[0] laptop:top-[-15px] bg-[#0F7863] rounded-[30px] py-[12px] px-[19px] flex items-center gap-[11px] text-[14px] text-[#FFFFFF] font-roboto font-[800] leading-[1.37]"
+        >
+          <RevenueStreamIcon />
+          <p>Withdraw</p>
+        </Link>
       </div>
     </div>
   );
