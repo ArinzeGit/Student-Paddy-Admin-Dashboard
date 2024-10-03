@@ -1,18 +1,30 @@
 // Table.tsx
 import React from "react";
+import Image from "next/image";
+import MonthDropdown from "./MonthDropdown";
 
 interface TableProps {
   title: string;
   columns: string[]; // Column headers
   data: { [key: string]: any }[]; // Array of objects representing rows
+  withMonthToggle: boolean;
 }
 
-const Table: React.FC<TableProps> = ({ title, columns, data }) => {
+const Table: React.FC<TableProps> = ({
+  title,
+  columns,
+  data,
+  withMonthToggle,
+}) => {
   return (
     <div className="overflow-x-auto bg-white p-[24px] rounded-[8px] w-[100%]">
-      <h2 className="text-[21px] text-[#2B2E48] font-[500] font-roboto leading-[1.37] tracking-1 mb-[20px]">
-        {title}
-      </h2>
+      <div className="flex items-center justify-between mb-[20px]">
+        <h2 className="text-[21px] text-[#2B2E48] font-[500] font-roboto leading-[1.37] tracking-1">
+          {title}
+        </h2>
+        {withMonthToggle && <MonthDropdown label="March 2023" />}
+      </div>
+
       <table className="min-w-[100%]">
         <thead>
           <tr>

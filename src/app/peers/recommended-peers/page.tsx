@@ -157,6 +157,7 @@ const RecommendedPeers = () => {
           title="Recommended Peers - 2,000"
           columns={recommendedPeersColumns}
           data={recommendedPeersData}
+          withMonthToggle
         />
       </div>
     </PeersLayout>

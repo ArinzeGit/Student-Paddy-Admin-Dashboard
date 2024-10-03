@@ -148,6 +148,7 @@ const SkillLibrary = () => {
           title="Top Videos"
           columns={topVideosColumns}
           data={top6VideosData}
+          withMonthToggle={false}
         />
         <Link
           href={"/skill-library/top-videos"}

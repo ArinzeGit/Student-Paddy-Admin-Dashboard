@@ -103,6 +103,7 @@ const TopVideos = () => {
           title="Top Videos - 20"
           columns={topVideosColumns}
           data={topVideosData}
+          withMonthToggle
         />
       </div>
     </SkillLlibraryLayout>

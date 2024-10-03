@@ -208,6 +208,7 @@ const Peers = () => {
           title="Top Peers"
           columns={topPeersColumns}
           data={top6PeersData}
+          withMonthToggle
         />
         <Link
           href={"/peers/top-peers"}

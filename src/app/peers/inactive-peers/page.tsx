@@ -157,6 +157,7 @@ const InactivePeers = () => {
           title="Inactive Peers - 2,000"
           columns={inactivePeersColumns}
           data={inactivePeersData}
+          withMonthToggle
         />
       </div>
     </PeersLayout>

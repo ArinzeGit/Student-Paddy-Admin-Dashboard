@@ -156,6 +156,7 @@ const TopPeers = () => {
           title="Top Peers - 20"
           columns={topPeersColumns}
           data={topPeersData}
+          withMonthToggle
         />
       </div>
     </PeersLayout>
