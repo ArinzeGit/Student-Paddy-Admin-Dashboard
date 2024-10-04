@@ -1,6 +1,9 @@
+"use client";
 import UniversityPeerGrowthGraph from "@/components/graphs/UniversityPeerGrowthGraph";
 import PeersLayout from "../PeersLayout";
 import Table from "@/components/Table";
+import { useState } from "react";
+import ProfileDrawer from "@/components/ProfileDrawer";
 
 const TotalPeers = () => {
   //sample data
@@ -143,6 +146,18 @@ const TotalPeers = () => {
     },
   ];
 
+  const [isProfileDrawerVisible, setProfileDrawerVisible] = useState(false);
+  const [selectedProfile, setSelectedProfile] = useState(null);
+
+  const handleRowClick = (rowData: any) => {
+    setSelectedProfile(rowData); // Set the clicked row's data to be used in the ProfileDrawer
+    setProfileDrawerVisible(true); // Show the ProfileDrawer
+  };
+
+  const handleCloseProfileDrawer = () => {
+    setProfileDrawerVisible(false); // Close the ProfileDrawer when necessary
+  };
+
   return (
     <PeersLayout>
       <div className="w-[100%]">
@@ -155,8 +170,14 @@ const TotalPeers = () => {
           data={totalPeersData}
           withMonthToggle={false}
           withSearch
+          onRowClick={handleRowClick}
         />
       </div>
+      <ProfileDrawer
+        isVisible={isProfileDrawerVisible}
+        onClose={handleCloseProfileDrawer}
+        profileData={selectedProfile}
+      />
     </PeersLayout>
   );
 };
