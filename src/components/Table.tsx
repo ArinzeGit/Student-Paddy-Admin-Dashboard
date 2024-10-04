@@ -1,6 +1,5 @@
-// Table.tsx
+"use client";
 import React from "react";
-import Image from "next/image";
 import MonthDropdown from "./MonthDropdown";
 import SearchBar from "./SearchBar";
 
@@ -10,6 +9,7 @@ interface TableProps {
   data: { [key: string]: any }[]; // Array of objects representing rows
   withMonthToggle: boolean;
   withSearch: boolean;
+  onRowClick?: (rowData: any) => void;
 }
 
 const Table: React.FC<TableProps> = ({
@@ -18,6 +18,7 @@ const Table: React.FC<TableProps> = ({
   data,
   withMonthToggle,
   withSearch,
+  onRowClick,
 }) => {
   return (
     <div className="overflow-x-auto bg-white p-[24px] pt-[4px] rounded-[8px] w-[100%]">
@@ -44,7 +45,11 @@ const Table: React.FC<TableProps> = ({
         </thead>
         <tbody>
           {data.map((row, rowIndex) => (
-            <tr key={rowIndex}>
+            <tr
+              key={rowIndex}
+              className={`${onRowClick ? "cursor-pointer" : ""}`}
+              onClick={() => onRowClick && onRowClick(row)}
+            >
               {columns.map((col, colIndex) => (
                 <td
                   key={colIndex}
