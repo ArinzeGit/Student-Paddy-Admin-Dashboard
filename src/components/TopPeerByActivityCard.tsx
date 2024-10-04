@@ -58,11 +58,13 @@ const TopPeerByActivityCard = () => {
           />
         </Link>
         <div>
-          <h2
-            className={`${openSans.className} text-[#000000] text-[20px] font-[600] leading-[1.36] ml-[2px]`}
-          >
-            Evelyn Johnson
-          </h2>
+          <Link href={"/peers/total-peers"}>
+            <h2
+              className={`${openSans.className} text-[#000000] text-[20px] font-[600] leading-[1.36] ml-[2px]`}
+            >
+              Evelyn Johnson
+            </h2>
+          </Link>
           <div className="flex items-center gap-[12px] mt-[13px]">
             <button>
               <Image
