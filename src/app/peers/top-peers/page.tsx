@@ -157,6 +157,7 @@ const TopPeers = () => {
           columns={topPeersColumns}
           data={topPeersData}
           withMonthToggle
+          withSearch={false}
         />
       </div>
     </PeersLayout>

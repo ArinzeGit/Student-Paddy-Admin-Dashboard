@@ -158,6 +158,7 @@ const UpskillingTime = () => {
           columns={upskillingTimeColumns}
           data={upskillingTimeData}
           withMonthToggle
+          withSearch={false}
         />
       </div>
     </SkillLlibraryLayout>

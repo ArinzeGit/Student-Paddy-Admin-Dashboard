@@ -131,6 +131,7 @@ const TotalCompetencies = () => {
           columns={totalCompetenciesColumns}
           data={totalCompetenciesData}
           withMonthToggle={false}
+          withSearch
         />
       </div>
     </SkillLlibraryLayout>

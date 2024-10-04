@@ -2,12 +2,14 @@
 import React from "react";
 import Image from "next/image";
 import MonthDropdown from "./MonthDropdown";
+import SearchBar from "./SearchBar";
 
 interface TableProps {
   title: string;
   columns: string[]; // Column headers
   data: { [key: string]: any }[]; // Array of objects representing rows
   withMonthToggle: boolean;
+  withSearch: boolean;
 }
 
 const Table: React.FC<TableProps> = ({
@@ -15,14 +17,16 @@ const Table: React.FC<TableProps> = ({
   columns,
   data,
   withMonthToggle,
+  withSearch,
 }) => {
   return (
-    <div className="overflow-x-auto bg-white p-[24px] rounded-[8px] w-[100%]">
-      <div className="flex items-center justify-between mb-[20px]">
-        <h2 className="text-[21px] text-[#2B2E48] font-[500] font-roboto leading-[1.37] tracking-1">
+    <div className="overflow-x-auto bg-white p-[24px] pt-[4px] rounded-[8px] w-[100%]">
+      <div className="flex items-center justify-between">
+        <h2 className="text-[21px] text-[#2B2E48] font-[500] font-roboto leading-[1.37] tracking-1 my-[20px]">
           {title}
         </h2>
         {withMonthToggle && <MonthDropdown label="March 2023" />}
+        {withSearch && <SearchBar />}
       </div>
 
       <table className="min-w-[100%]">

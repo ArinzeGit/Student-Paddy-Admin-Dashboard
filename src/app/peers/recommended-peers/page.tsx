@@ -158,6 +158,7 @@ const RecommendedPeers = () => {
           columns={recommendedPeersColumns}
           data={recommendedPeersData}
           withMonthToggle
+          withSearch={false}
         />
       </div>
     </PeersLayout>

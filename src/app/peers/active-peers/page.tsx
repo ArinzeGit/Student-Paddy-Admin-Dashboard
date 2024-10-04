@@ -158,6 +158,7 @@ const ActivePeers = () => {
           columns={activePeersColumns}
           data={activePeersData}
           withMonthToggle
+          withSearch={false}
         />
       </div>
     </PeersLayout>
