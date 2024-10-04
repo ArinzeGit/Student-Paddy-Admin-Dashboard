@@ -15,11 +15,26 @@ interface DataPoint {
 
 // Main component
 const RevenueStreamGraph = () => {
+  const RevenueStreamData = [
+    { name: "Potential Earning", value: 55 },
+    { name: "Total Paid", value: 45 },
+  ];
+
   useEffect(() => {
     // Sample data with varying thicknesses
     const data: DataPoint[] = [
-      { name: "Potential Earning", value: 55, thickness: 63, color: "#0F7863" },
-      { name: "Total Paid", value: 45, thickness: 50, color: "#FA0C00" },
+      {
+        name: RevenueStreamData[0].name,
+        value: RevenueStreamData[0].value,
+        thickness: 63,
+        color: "#0F7863",
+      },
+      {
+        name: RevenueStreamData[1].name,
+        value: RevenueStreamData[1].value,
+        thickness: 50,
+        color: "#FA0C00",
+      },
     ];
 
     // Set dimensions for the SVG container
@@ -147,11 +162,11 @@ const RevenueStreamGraph = () => {
         <div className="flex items-center gap-[10px] absolute left-[44%] translate-x-[-50%] top-[10px]">
           <div className="w-[27px] h-[13px] rounded-xl bg-[#0F7863]"></div>
           <p className="text-[12px] text-[#000000] font-roboto font-[400] leading-[1.92] tracking-[0.5px]">
-            Potential Earning 55%
+            {`${RevenueStreamData[0].name} ${RevenueStreamData[0].value}%`}
           </p>
           <div className="w-[27px] h-[13px] rounded-xl bg-[#FA0C00]"></div>
           <p className="text-[12px] text-[#000000] font-roboto font-[400] leading-[1.92] tracking-[0.5px]">
-            Total Paid 44%
+            {`${RevenueStreamData[1].name} ${RevenueStreamData[1].value}%`}
           </p>
         </div>
         <Link
