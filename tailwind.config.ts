@@ -17,7 +17,11 @@ const config: Config = {
         roboto: ['Roboto', 'Montserrat', 'sans-serif'],
       },
       screens: {
-        laptop: '1200px', 
+        laptop: '1200px',
+        screen1: '1500px',
+        screen2: '1660px',
+        screen3: '1760px',
+        screen4: '1900px',
       },
       letterSpacing:{
         '1': '0.01em',
