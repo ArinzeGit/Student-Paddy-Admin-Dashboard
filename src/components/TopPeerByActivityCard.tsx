@@ -45,16 +45,17 @@ const TopPeerByActivityCard = () => {
           </button>
         </div>
       </div>
-      <div className="flex gap-[20px] items-center  mt-[12px]">
+      <div className="flex gap-[20px] items-center mt-[12px] screen2:mt-[36px]">
         <Link
           href={"/peers/total-peers"}
-          className="h-[90px] w-[90px] rounded-[50%] overflow-hidden"
+          className="h-[90px] w-[90px] screen1:h-[124px] screen1:w-[124px] rounded-[50%] overflow-hidden relative"
         >
           <Image
             src={"/images/picture-evelyn-johnson.png"}
-            height={92}
-            width={92}
             alt="Profile picture"
+            fill
+            className="object-cover"
+            sizes="(max-width: 750px) 100vw, 750px"
           />
         </Link>
         <div>
@@ -88,7 +89,7 @@ const TopPeerByActivityCard = () => {
           </div>
         </div>
       </div>
-      <div className="grid grid-cols-[163fr_153fr] gap-y-[12px] mt-[13px] text-[#2B2E48] text-[12px] font-roboto font-[400] leading-[1.37]">
+      <div className="grid grid-cols-[163fr_153fr] screen3:grid-cols-[1fr] gap-y-[12px] screen2:gap-y-[20px] screen3:gap-y-[12px] screen4:gap-y-[25px] mt-[13px] screen2:mt-[36px] text-[#2B2E48] text-[12px] font-roboto font-[400] leading-[1.37]">
         <div className="flex gap-[10px] items-center">
           <Image
             src={"/images/icon-recommendations.png"}
@@ -126,7 +127,7 @@ const TopPeerByActivityCard = () => {
           30 badges
         </div>
       </div>
-      <h2 className="text-[#000000] text-[16px] font-roboto font-[800] leading-[1.37] mt-[13px]">
+      <h2 className="text-[#000000] text-[16px] font-roboto font-[800] leading-[1.37] mt-[13px] screen2:mt-[30px] screen3:mt-[20px] screen4:mt-[40px]">
         Academic Status
       </h2>
       <div className="flex flex-col gap-[14px] mt-[10px] text-[#474747] text-[14px] font-roboto font-[500] leading-[1.37]">
