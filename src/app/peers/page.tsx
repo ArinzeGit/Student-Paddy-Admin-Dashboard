@@ -196,7 +196,7 @@ const Peers = () => {
         <UniversityPeerGrowthGraph />
       </div>
 
-      <div className="mt-[24px] flex gap-[2.1%] items-start">
+      <div className="mt-[24px] flex gap-[2.1%]">
         <div className="flex-1 min-w-[375px]">
           <ActivePeersGraph />
         </div>
