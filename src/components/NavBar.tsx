@@ -8,6 +8,7 @@ import EmployersIcon from "./icons/EmployersIcon";
 import IntegrationsIcon from "./icons/IntegrationsIcon";
 import SettingsIcon from "./icons/SettingsIcon";
 import LogoutIcon from "./icons/LogoutIcon";
+import RoomsIcon from "./icons/RoomsIcon";
 const NavBar = () => {
   return (
     <div className="flex flex-col justify-between min-h-[100vh] bg-[white] py-[25px]">
@@ -21,12 +22,13 @@ const NavBar = () => {
           className="ml-[34px] mr-[60.77px] mb-[39.5px]"
         />
         <NavLink Icon={<DashboardIcon />} label="Dashboard" href="/dashboard" />
+        <NavLink Icon={<PeersIcon />} label="Peers" href="/peers" />
+        <NavLink Icon={<RoomsIcon />} label="Rooms" href="/rooms" />
         <NavLink
           Icon={<SkillLibraryIcon />}
           label="Skill Library"
           href="/skill-library"
         />
-        <NavLink Icon={<PeersIcon />} label="Peers" href="/peers" />
         <NavLink
           Icon={<PlacementsIcon />}
           label="Placements"
