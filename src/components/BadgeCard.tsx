@@ -29,14 +29,11 @@ const BadgeCard = ({ iconSrc, label, badgeSrc }: BadgeCardProps) => {
         >
           {isExpanded ? "Hide" : "View"}
           <Image
-            src={
-              isExpanded
-                ? "/images/icon-hide-up.png"
-                : "/images/icon-view-down.png"
-            }
+            src={"/images/icon-view-down.png"}
             alt="Toggle view"
             height={7}
             width={12}
+            className={isExpanded ? "rotate-180" : ""}
           />
         </button>
       </div>
