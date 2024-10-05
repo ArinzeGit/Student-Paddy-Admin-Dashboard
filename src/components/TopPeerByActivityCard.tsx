@@ -1,7 +1,9 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
 // Import Open Sans using next/font/google
 import { Open_Sans } from "next/font/google";
+import { useRouter } from "next/navigation";
 
 // Set font configuration
 const openSans = Open_Sans({
@@ -10,6 +12,13 @@ const openSans = Open_Sans({
 });
 
 const TopPeerByActivityCard = () => {
+  const router = useRouter();
+  const studentId = "160803446";
+
+  const handleCardClick = () => {
+    router.push(`/peers/total-peers?studentId=${studentId}`); // Redirect to table page with the student ID to open respective drawer
+  };
+
   return (
     <div className="bg-white rounded-[8px] min-h-[450px] min-w-[364px] p-[24px]">
       <h2 className="text-[#2B2E48] text-[21px] font-roboto font-[500] leading-[1.37] tracking-1 ">
@@ -46,9 +55,9 @@ const TopPeerByActivityCard = () => {
         </div>
       </div>
       <div className="flex gap-[20px] items-center mt-[12px] screen2:mt-[36px]">
-        <Link
-          href={"/peers/total-peers"}
-          className="h-[90px] w-[90px] screen1:h-[124px] screen1:w-[124px] rounded-[50%] overflow-hidden relative"
+        <div
+          onClick={handleCardClick}
+          className="cursor-pointer shadow-[0_1px_1px_0_rgba(0,0,0,0.25)] h-[90px] w-[90px] screen1:h-[124px] screen1:w-[124px] rounded-[50%] overflow-hidden relative"
         >
           <Image
             src={"/images/picture-evelyn-johnson.png"}
@@ -57,15 +66,15 @@ const TopPeerByActivityCard = () => {
             className="object-cover"
             sizes="(max-width: 750px) 100vw, 750px"
           />
-        </Link>
+        </div>
         <div>
-          <Link href={"/peers/total-peers"}>
-            <h2
-              className={`${openSans.className} text-[#000000] text-[20px] font-[600] leading-[1.36] ml-[2px]`}
-            >
-              Evelyn Johnson
-            </h2>
-          </Link>
+          <h2
+            onClick={handleCardClick}
+            className={`${openSans.className} cursor-pointer text-[#000000] text-[20px] font-[600] leading-[1.36] ml-[2px]`}
+          >
+            Evelyn Johnson
+          </h2>
+
           <div className="flex items-center gap-[12px] mt-[13px]">
             <button>
               <Image
