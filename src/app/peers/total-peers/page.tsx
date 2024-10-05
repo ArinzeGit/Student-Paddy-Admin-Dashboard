@@ -2,10 +2,21 @@
 import UniversityPeerGrowthGraph from "@/components/graphs/UniversityPeerGrowthGraph";
 import PeersLayout from "../PeersLayout";
 import Table from "@/components/Table";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import ProfileDrawer from "@/components/ProfileDrawer";
+import { useSearchParams } from "next/navigation";
+interface Profile {
+  ID: string;
+  Name: string;
+  "Academic Status": string;
+  Gender: string;
+  Faculty: string;
+  Department: string;
+}
 
 const TotalPeers = () => {
+  const searchParams = useSearchParams();
+  const studentId = searchParams.get("studentId"); // Get the studentId query parameter
   //sample data
   const totalPeersColumns = [
     "ID",
@@ -16,6 +27,14 @@ const TotalPeers = () => {
     "Department",
   ];
   const totalPeersData = [
+    {
+      ID: "160803446",
+      Name: "Evelyn Johnson",
+      "Academic Status": "Graduate",
+      Gender: "F",
+      Faculty: "EDUCATION",
+      Department: "Human Kinetic Studies",
+    },
     {
       ID: "160408006",
       Name: "Daniel Bolatosun",
@@ -147,7 +166,7 @@ const TotalPeers = () => {
   ];
 
   const [isProfileDrawerVisible, setProfileDrawerVisible] = useState(false);
-  const [selectedProfile, setSelectedProfile] = useState(null);
+  const [selectedProfile, setSelectedProfile] = useState<Profile | null>(null);
 
   const handleRowClick = (rowData: any) => {
     setSelectedProfile(rowData); // Set the clicked row's data to be used in the ProfileDrawer
@@ -157,6 +176,19 @@ const TotalPeers = () => {
   const handleCloseProfileDrawer = () => {
     setProfileDrawerVisible(false); // Close the ProfileDrawer when necessary
   };
+
+  useEffect(() => {
+    if (studentId) {
+      // Find the student from the data
+      const studentProfile = totalPeersData.find(
+        (student) => student.ID === studentId
+      );
+      if (studentProfile) {
+        setSelectedProfile(studentProfile); // Set the profile data for the sidebar
+        setProfileDrawerVisible(true); // Open the sidebar
+      }
+    }
+  }, [studentId]); // Run this effect whenever studentId changes
 
   return (
     <PeersLayout>
