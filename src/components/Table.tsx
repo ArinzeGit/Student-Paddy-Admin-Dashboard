@@ -48,7 +48,7 @@ const Table: React.FC<TableProps> = ({
             <tr
               key={rowIndex}
               className={`${onRowClick ? "cursor-pointer" : ""}`}
-              onClick={() => onRowClick && onRowClick(row)}
+              onClick={() => onRowClick?.(row)}
             >
               {columns.map((col, colIndex) => (
                 <td
