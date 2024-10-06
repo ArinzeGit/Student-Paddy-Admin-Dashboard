@@ -26,7 +26,7 @@ const Table: React.FC<TableProps> = ({
         <h2 className="text-[21px] text-[#2B2E48] font-[500] font-roboto leading-[1.37] tracking-1 my-[20px]">
           {title}
         </h2>
-        {withMonthToggle && <MonthDropdown label="March 2023" />}
+        {withMonthToggle && <MonthDropdown />}
         {withSearch && <SearchBar />}
       </div>
 

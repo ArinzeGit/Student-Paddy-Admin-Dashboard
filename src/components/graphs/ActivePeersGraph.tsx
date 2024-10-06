@@ -203,7 +203,7 @@ const ActivePeersGraph = () => {
         <p className="text-[21px] text-[#2B2E48] font-roboto font-[500] leading-[1.37] tracking-1">
           Active peers
         </p>
-        <MonthDropdown label="Month" />
+        <MonthDropdown />
       </div>
       <div className=" flex items-center mb-[5px] gap-[8px]">
         <div className="w-[10px] h-[10px] rounded-xl bg-[#0F7863]"></div>

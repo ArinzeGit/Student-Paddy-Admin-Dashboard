@@ -1,14 +1,10 @@
 import Image from "next/image";
 
-interface MOnthDropdownProps {
-  label: string;
-}
-
-const MonthDropdown = ({ label }: MOnthDropdownProps) => {
+const MonthDropdown = () => {
   return (
     <button className="bg-[#F1F3F4] rounded-[4px] pl-[12px] pr-[4px] py-[4px] flex items-center gap-[4px]">
       <span className="text-[#2B2E48] text-[12px] font-roboto font-[400] leading[1.37]">
-        {label}
+        March 2023
       </span>
       <Image
         src={"/images/icon-month-dropdown.png"}

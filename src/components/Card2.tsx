@@ -33,7 +33,7 @@ const Card2 = ({ label, value, iconSrc, url }: Card2Props) => {
             className="inline-block ml-[5px]"
           />
         </Link>
-        <MonthDropdown label="Month" />
+        <MonthDropdown />
       </div>
     </div>
   );

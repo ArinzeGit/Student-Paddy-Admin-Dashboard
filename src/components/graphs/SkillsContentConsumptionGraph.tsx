@@ -125,7 +125,7 @@ const SkillsContentConsumptionGraph = () => {
             />
           </button>
           <div className="ml-[16px]">
-            <MonthDropdown label="March 2023" />
+            <MonthDropdown />
           </div>
         </div>
       </div>
