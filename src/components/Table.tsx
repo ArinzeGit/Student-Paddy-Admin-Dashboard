@@ -7,8 +7,8 @@ interface TableProps {
   title: string;
   columns: string[]; // Column headers
   data: { [key: string]: any }[]; // Array of objects representing rows
-  withMonthToggle: boolean;
-  withSearch: boolean;
+  withMonthToggle?: boolean;
+  withSearch?: boolean;
   onRowClick?: (rowData: any) => void;
 }
 
