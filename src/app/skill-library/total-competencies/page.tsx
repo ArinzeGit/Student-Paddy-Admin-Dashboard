@@ -130,7 +130,6 @@ const TotalCompetencies = () => {
           title="Total Competencies - 33"
           columns={totalCompetenciesColumns}
           data={totalCompetenciesData}
-          withMonthToggle={false}
           withSearch
         />
       </div>

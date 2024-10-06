@@ -104,7 +104,6 @@ const TotalVideos = () => {
           title="Total Videos - 2,000"
           columns={totalVideosColumns}
           data={totalVideosData}
-          withMonthToggle={false}
           withSearch
         />
       </div>
