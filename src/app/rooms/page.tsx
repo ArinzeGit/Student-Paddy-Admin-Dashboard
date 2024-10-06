@@ -189,7 +189,7 @@ const Rooms = () => {
         />
       </div>
 
-      <div className="w-[100%] mt-[24px] pb-[27px] bg-white rounded-[8px] relative">
+      <div className="w-[66%] mt-[24px] pb-[27px] bg-white rounded-[8px] relative">
         <Table
           title="Top sessions"
           columns={topSessionsColumns}
