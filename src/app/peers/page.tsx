@@ -156,11 +156,11 @@ const Peers = () => {
     },
   ];
 
-  function getTop6Peers(data: { [key: string]: any }[]) {
+  function getTop6(data: { [key: string]: any }[]) {
     return data.slice(0, 6); // Get the first 6 items
   }
 
-  const top6PeersData = getTop6Peers(topPeersData);
+  const top6PeersData = getTop6(topPeersData);
 
   return (
     <EntryPageLayout>
@@ -209,7 +209,6 @@ const Peers = () => {
           columns={topPeersColumns}
           data={top6PeersData}
           withMonthToggle
-          withSearch={false}
         />
         <Link
           href={"/peers/top-peers"}
