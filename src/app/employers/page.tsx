@@ -176,7 +176,7 @@ const Employers = () => {
             title="Top employers by offers"
             columns={topEmployersByOffersColumns}
             data={top6EmployersByOffersData}
-            withMonthToggle
+            withYearToggle
           />
           <Link
             href={""}
@@ -199,7 +199,7 @@ const Employers = () => {
             title="Top employers by salaries"
             columns={topEmployersBySalariesColumns}
             data={top6EmployersBySalariesData}
-            withMonthToggle
+            withYearToggle
           />
           <Link
             href={""}
