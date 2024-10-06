@@ -2,12 +2,14 @@
 import React from "react";
 import MonthDropdown from "./MonthDropdown";
 import SearchBar from "./SearchBar";
+import YearDropdown from "./YearDropdown";
 
 interface TableProps {
   title: string;
   columns: string[]; // Column headers
   data: { [key: string]: any }[]; // Array of objects representing rows
   withMonthToggle?: boolean;
+  withYearToggle?: boolean;
   withSearch?: boolean;
   onRowClick?: (rowData: any) => void;
 }
@@ -17,6 +19,7 @@ const Table: React.FC<TableProps> = ({
   columns,
   data,
   withMonthToggle,
+  withYearToggle,
   withSearch,
   onRowClick,
 }) => {
@@ -27,6 +30,7 @@ const Table: React.FC<TableProps> = ({
           {title}
         </h2>
         {withMonthToggle && <MonthDropdown />}
+        {withYearToggle && <YearDropdown />}
         {withSearch && <SearchBar />}
       </div>
 
