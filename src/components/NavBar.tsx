@@ -11,7 +11,7 @@ import LogoutIcon from "./icons/LogoutIcon";
 import RoomsIcon from "./icons/RoomsIcon";
 const NavBar = () => {
   return (
-    <div className="flex flex-col justify-between min-h-[100vh] bg-[white] py-[25px]">
+    <div className="flex flex-col justify-between h-[100vh] overflow-y-auto no-scrollbar bg-[white] py-[25px]">
       <div className="space-y-[14px]">
         <Image
           src={"/images/logo-student-paddy.png"}
@@ -41,7 +41,7 @@ const NavBar = () => {
           href="/integrations"
         />
       </div>
-      <div className="space-y-[14px]">
+      <div className="space-y-[14px] mt-[14px]">
         <NavLink Icon={<SettingsIcon />} label="Settings" href="/settings" />
         <NavLink Icon={<LogoutIcon />} label="Logout" href="/logout" />
       </div>
