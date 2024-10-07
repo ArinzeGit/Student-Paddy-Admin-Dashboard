@@ -123,9 +123,9 @@ const SectorEmployabilityGraph = () => {
       </div>
       <div className=" flex items-center mb-[8px] gap-[10px] text-[12px] text-[#2B2E48] font-roboto font-[400] leading-[1.9] tracking-[0.5px]">
         <div className="w-[27px] h-[13px] rounded-xl bg-[#F28768]"></div>
-        <p>Interviews</p>
+        <p>{data.datasets[0].label}</p>
         <div className="w-[27px] h-[13px] rounded-xl bg-[#5DAAEE]"></div>
-        <p>Offers</p>
+        <p>{data.datasets[1].label}</p>
       </div>
       <Bar data={data} options={options} />
     </div>
