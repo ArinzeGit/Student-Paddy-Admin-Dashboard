@@ -4,6 +4,7 @@ import Card2 from "@/components/Card2";
 import Table from "@/components/Table";
 import Link from "next/link";
 import Image from "next/image";
+import SectorEmployabilityGraph from "@/components/graphs/SectorEmployabilityGraph";
 
 const Employers = () => {
   const topEmployersByOffersColumns = [
@@ -217,6 +218,9 @@ const Employers = () => {
             />
           </Link>
         </div>
+      </div>
+      <div className="w-[100%] mt-[24px]">
+        <SectorEmployabilityGraph />
       </div>
     </EntryPageLayout>
   );
