@@ -132,7 +132,7 @@ const SkillsContentConsumptionGraph = () => {
       <div className=" flex items-center mb-[5px] gap-[8px]">
         <div className="w-[27px] h-[13px] rounded-xl bg-[#FFC565]"></div>
         <p className="text-[12px] text-[#2B2E48] font-roboto font-[400] leading-[1.37]">
-          Total Earned Badges
+          {data.datasets[0].label}
         </p>
       </div>
       <Bar data={data} options={options} />
