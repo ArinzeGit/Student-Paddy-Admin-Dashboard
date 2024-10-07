@@ -138,7 +138,7 @@ const RevenueStreamGraph = () => {
           </p>
         </div>
         <div className="h-[193px] border-l border-dotted border-[#98B0A9]" />
-        <div id="doughnutChart" className="w-[80%]"></div>
+        <div id="doughnutChart" className="w-[80%]" />
         <div className="h-[193px] border-l border-dotted border-[#98B0A9]" />
         <div>
           <p className="font-roboto font-[500] text-[21px] text-[#2B2E48] leading-[1.37] tracking-1">
