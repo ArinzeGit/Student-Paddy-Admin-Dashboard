@@ -237,13 +237,13 @@ const PlacementTrendGraph = () => {
         <div className=" flex items-center gap-[8px]">
           <div className="w-[10px] h-[10px] rounded-xl bg-[#7B57E0]"></div>
           <p className="text-[12px] text-[#2B2E48] font-roboto font-[400] leading-[1.37]">
-            2022
+            {data.datasets[0].label}
           </p>
         </div>
         <div className=" flex items-center gap-[8px]">
           <div className="w-[10px] h-[10px] rounded-xl bg-[#0F7863]"></div>
           <p className="text-[12px] text-[#2B2E48] font-roboto font-[400] leading-[1.37]">
-            2021
+            {data.datasets[1].label}
           </p>
         </div>
       </div>
