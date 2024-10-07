@@ -1,6 +1,7 @@
 import Card1 from "@/components/Card1";
 import EntryPageLayout from "../EntryPageLayout";
 import Card2 from "@/components/Card2";
+import FacultyWisePlacementGraph from "@/components/graphs/FacultyWisePlacementGraph";
 
 const Placements = () => {
   return (
@@ -58,6 +59,9 @@ const Placements = () => {
           iconSrc={"/images/icon-full-time-placements.png"}
           url={""}
         />
+      </div>
+      <div className="w-[100%] mt-[24px]">
+        <FacultyWisePlacementGraph />
       </div>
     </EntryPageLayout>
   );
