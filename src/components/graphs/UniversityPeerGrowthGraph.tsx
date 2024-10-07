@@ -193,11 +193,11 @@ const UniversityPeerGrowthGraph = () => {
           <div className="flex items-center gap-[10px]">
             <div className="w-[27px] h-[13px] rounded-xl bg-[#E5E9F2]"></div>
             <p className="text-[12px] text-[#000000] font-roboto font-[400] leading-[1.92]">
-              Graduate
+              {data.datasets[0].label}
             </p>
             <div className="w-[27px] h-[13px] rounded-xl bg-[#4072EE]"></div>
             <p className="text-[12px] text-[#000000] font-roboto font-[400] leading-[1.92]">
-              Undergraduate
+              {data.datasets[1].label}
             </p>
           </div>
         </div>
