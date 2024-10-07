@@ -3,6 +3,7 @@ import EntryPageLayout from "../EntryPageLayout";
 import Card2 from "@/components/Card2";
 import FacultyWisePlacementGraph from "@/components/graphs/FacultyWisePlacementGraph";
 import PlacementTrendGraph from "@/components/graphs/PlacementTrendGraph";
+import SectorWisePlacementGraph from "@/components/graphs/SectorWisePlacementGraph";
 
 const Placements = () => {
   return (
@@ -61,9 +62,16 @@ const Placements = () => {
           url={""}
         />
       </div>
-      <div className="w-[66%] mt-[24px]">
-        <PlacementTrendGraph />
+
+      <div className="mt-[24px] flex justify-between">
+        <div className="w-[66%]">
+          <PlacementTrendGraph />
+        </div>
+        <div className="w-[32%]">
+          <SectorWisePlacementGraph />
+        </div>
       </div>
+
       <div className="w-[100%] mt-[24px]">
         <FacultyWisePlacementGraph />
       </div>
