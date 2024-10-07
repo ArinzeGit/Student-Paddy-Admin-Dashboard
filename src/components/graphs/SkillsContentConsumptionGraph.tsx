@@ -41,7 +41,6 @@ const SkillsContentConsumptionGraph = () => {
         data: [200, 80, 70, 190, 90, 80, 40],
         backgroundColor: "#FFC565", // Bar color
         borderRadius: 13,
-        borderSkipped: false,
       },
     ],
   };
