@@ -1,6 +1,6 @@
 "use client"; // Required for client-side rendering in Next.js
 
-import React, { useEffect } from "react";
+import React, { useEffect, useMemo } from "react";
 import * as d3 from "d3";
 import Link from "next/link";
 import RevenueStreamIcon from "../icons/RevenueStreamIcon";
@@ -15,10 +15,14 @@ interface DataPoint {
 
 // Main component
 const RevenueStreamGraph = () => {
-  const RevenueStreamData = [
-    { name: "Potential Earning", value: 55 },
-    { name: "Total Paid", value: 45 },
-  ];
+  // Memoize RevenueStreamData to prevent re-creation on each render. Recreation of data will trigger useEffect unnecessarily since it is in dependency array.
+  const RevenueStreamData = useMemo(
+    () => [
+      { name: "Potential Earning", value: 55 },
+      { name: "Total Paid", value: 45 },
+    ],
+    []
+  ); // No dependencies, so it will not change
 
   useEffect(() => {
     // Sample data with varying thicknesses

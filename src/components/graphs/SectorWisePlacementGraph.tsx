@@ -1,6 +1,6 @@
 "use client"; // Required for client-side rendering in Next.js
 
-import React, { useEffect } from "react";
+import React, { useEffect, useMemo } from "react";
 import * as d3 from "d3";
 import YearDropdown from "../YearDropdown";
 
@@ -14,15 +14,19 @@ interface DataPoint {
 
 // Main component
 const SectorWisePlacementGraph = () => {
-  const SectorWisePlacementData = [
-    { name: "Software & IT", value: 51 },
-    { name: "Fianance", value: 18 },
-    { name: "Health", value: 13 },
-    { name: "Engineering", value: 8 },
-    { name: "Media & Publishing", value: 5 },
-    { name: "Law", value: 3 },
-    { name: "Others", value: 2 },
-  ];
+  // Memoize SectorWisePlacementData to prevent re-creation on each render. Recreation of data will trigger useEffect unnecessarily since it is in dependency array.
+  const SectorWisePlacementData = useMemo(
+    () => [
+      { name: "Software & IT", value: 51 },
+      { name: "Fianance", value: 18 },
+      { name: "Health", value: 13 },
+      { name: "Engineering", value: 8 },
+      { name: "Media & Publishing", value: 5 },
+      { name: "Law", value: 3 },
+      { name: "Others", value: 2 },
+    ],
+    []
+  ); // No dependencies, so it will not change
 
   useEffect(() => {
     // Sample data with varying thicknesses
