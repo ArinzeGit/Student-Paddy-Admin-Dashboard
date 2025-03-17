@@ -2,7 +2,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { Open_Sans } from "next/font/google";
 import { useState } from "react";
-import PeersIcon from "./icons/PeersIcon";
 
 // Set font configuration
 const openSans = Open_Sans({
