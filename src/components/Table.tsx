@@ -7,11 +7,11 @@ import YearDropdown from "./YearDropdown";
 interface TableProps {
   title: string;
   columns: string[]; // Column headers
-  data: { [key: string]: any }[]; // Array of objects representing rows
+  data: { [key: string]: number | string }[]; // Array of objects representing rows
   withMonthToggle?: boolean;
   withYearToggle?: boolean;
   withSearch?: boolean;
-  onRowClick?: (rowData: any) => void;
+  onRowClick?: (rowData: { [key: string]: string | number }) => void;
 }
 
 const Table: React.FC<TableProps> = ({

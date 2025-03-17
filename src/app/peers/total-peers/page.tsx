@@ -175,8 +175,18 @@ const TotalPeers = () => {
     Department: "",
   });
 
-  const handleRowClick = (rowData: any) => {
-    setSelectedProfile(rowData); // Set the clicked row's data to be used in the ProfileDrawer
+  const transformedTotalPeersData = totalPeersData.map((profile) => ({
+    //Used to change the 'type' of the data to fit what the onRowClick of the table component expects.
+    ID: profile.ID,
+    Name: profile.Name,
+    "Academic Status": profile["Academic Status"],
+    Gender: profile.Gender,
+    Faculty: profile.Faculty,
+    Department: profile.Department,
+  })) as Array<{ [key: string]: string | number }>;
+
+  const handleRowClick = (rowData: { [key: string]: string | number }) => {
+    setSelectedProfile(rowData as unknown as Profile); // convert clicked row's data from type ":{ [key: string]: string | number }" to type "Profile" and set it as selectedProfile to be used in the ProfileDrawer
     setProfileDrawerVisible(true); // Show the ProfileDrawer
   };
 
@@ -206,7 +216,7 @@ const TotalPeers = () => {
         <Table
           title="Total Peers - 15,556"
           columns={totalPeersColumns}
-          data={totalPeersData}
+          data={transformedTotalPeersData} // Use transformed data because onRowClick expects the generic ": { [key: string]: string | number }" type not the type "Profile"
           withMonthToggle={false}
           withSearch
           onRowClick={handleRowClick}
