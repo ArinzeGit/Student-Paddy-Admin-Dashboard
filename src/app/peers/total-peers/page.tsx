@@ -2,9 +2,8 @@
 import UniversityPeerGrowthGraph from "@/components/graphs/UniversityPeerGrowthGraph";
 import PeersLayout from "../PeersLayout";
 import Table from "@/components/Table";
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import ProfileDrawer from "@/components/ProfileDrawer";
-import { useSearchParams } from "next/navigation";
 export interface Profile {
   ID: string;
   Name: string;
@@ -15,8 +14,6 @@ export interface Profile {
 }
 
 const TotalPeers = () => {
-  const searchParams = useSearchParams();
-  const studentId = searchParams.get("studentId"); // Get the studentId query parameter
   //sample data
   const totalPeersColumns = [
     "ID",
@@ -26,144 +23,148 @@ const TotalPeers = () => {
     "Faculty",
     "Department",
   ];
-  const totalPeersData = [
-    {
-      ID: "160803446",
-      Name: "Evelyn Johnson",
-      "Academic Status": "Graduate",
-      Gender: "F",
-      Faculty: "EDUCATION",
-      Department: "Human Kinetic Studies",
-    },
-    {
-      ID: "160408006",
-      Name: "Daniel Bolatosun",
-      "Academic Status": "Graduate",
-      Gender: "M",
-      Faculty: "ENGINEERING",
-      Department: "Met & Mat Engineering",
-    },
-    {
-      ID: "160408006",
-      Name: "Phillip Mediloa",
-      "Academic Status": "Undergraduate",
-      Gender: "M",
-      Faculty: "SCIENCE",
-      Department: "Computer Engineering",
-    },
-    {
-      ID: "160408006",
-      Name: "Phillip Mediloa",
-      "Academic Status": "Undergraduate",
-      Gender: "M",
-      Faculty: "MGMT SCIENCE",
-      Department: "Computer Engineering",
-    },
-    {
-      ID: "160408006",
-      Name: "Michael Durojaye",
-      "Academic Status": "Graduate",
-      Gender: "F",
-      Faculty: "ENGINEERING",
-      Department: "Computer Engineering",
-    },
-    {
-      ID: "160408006",
-      Name: "Michael Durojaye",
-      "Academic Status": "Graduate",
-      Gender: "F",
-      Faculty: "SCIENCE",
-      Department: "Met & Mat Engineering",
-    },
-    {
-      ID: "160408006",
-      Name: "Michael Durojaye",
-      "Academic Status": "Undergraduate",
-      Gender: "M",
-      Faculty: "MGMT SCIENCE",
-      Department: "Met & Mat Engineering",
-    },
-    {
-      ID: "160408006",
-      Name: "Deliaj Hadeio",
-      "Academic Status": "Graduate",
-      Gender: "F",
-      Faculty: "ENGINEERING",
-      Department: "Met & Mat Engineering",
-    },
-    {
-      ID: "160403343",
-      Name: "Deliaj Hadeio",
-      "Academic Status": "Graduate",
-      Gender: "F",
-      Faculty: "SCIENCE",
-      Department: "Mechanical Engineering",
-    },
-    {
-      ID: "122345345",
-      Name: "Deliaj Hadeio",
-      "Academic Status": "Undergraduate",
-      Gender: "F",
-      Faculty: "MGMT SCIENCE",
-      Department: "Mechanical Engineering",
-    },
-    {
-      ID: "122345345",
-      Name: "Deliaj Hadeio",
-      "Academic Status": "Undergraduate",
-      Gender: "F",
-      Faculty: "ENGINEERING",
-      Department: "Mechanical Engineering",
-    },
-    {
-      ID: "122345345",
-      Name: "Deliaj Hadeio",
-      "Academic Status": "Undergraduate",
-      Gender: "F",
-      Faculty: "SCIENCE",
-      Department: "Computer Engineering",
-    },
-    {
-      ID: "122345345",
-      Name: "Phillip Mediloa",
-      "Academic Status": "Undergraduate",
-      Gender: "M",
-      Faculty: "MGMT SCIENCE",
-      Department: "Computer Engineering",
-    },
-    {
-      ID: "233545353",
-      Name: "Deliaj Hadeio",
-      "Academic Status": "Graduate",
-      Gender: "F",
-      Faculty: "ENGINEERING",
-      Department: "Computer Engineering",
-    },
-    {
-      ID: "233545353",
-      Name: "Phillip Mediloa",
-      "Academic Status": "Undergraduate",
-      Gender: "M",
-      Faculty: "SCIENCE",
-      Department: "Met & Mat Engineering",
-    },
-    {
-      ID: "233545353",
-      Name: "Phillip Mediloa",
-      "Academic Status": "Undergraduate",
-      Gender: "M",
-      Faculty: "MGMT SCIENCE",
-      Department: "Met & Mat Engineering",
-    },
-    {
-      ID: "233545353",
-      Name: "Phillip Mediloa",
-      "Academic Status": "Graduate",
-      Gender: "M",
-      Faculty: "ENGINEERING",
-      Department: "Met & Mat Engineering",
-    },
-  ];
+  //Memoize totalPeersData to prevent recreation on render because it is in dependency array of useEffect and will cause unnecessary re-render.
+  const totalPeersData = useMemo(
+    () => [
+      {
+        ID: "160803446",
+        Name: "Evelyn Johnson",
+        "Academic Status": "Graduate",
+        Gender: "F",
+        Faculty: "EDUCATION",
+        Department: "Human Kinetic Studies",
+      },
+      {
+        ID: "160408006",
+        Name: "Daniel Bolatosun",
+        "Academic Status": "Graduate",
+        Gender: "M",
+        Faculty: "ENGINEERING",
+        Department: "Met & Mat Engineering",
+      },
+      {
+        ID: "160408006",
+        Name: "Phillip Mediloa",
+        "Academic Status": "Undergraduate",
+        Gender: "M",
+        Faculty: "SCIENCE",
+        Department: "Computer Engineering",
+      },
+      {
+        ID: "160408006",
+        Name: "Phillip Mediloa",
+        "Academic Status": "Undergraduate",
+        Gender: "M",
+        Faculty: "MGMT SCIENCE",
+        Department: "Computer Engineering",
+      },
+      {
+        ID: "160408006",
+        Name: "Michael Durojaye",
+        "Academic Status": "Graduate",
+        Gender: "F",
+        Faculty: "ENGINEERING",
+        Department: "Computer Engineering",
+      },
+      {
+        ID: "160408006",
+        Name: "Michael Durojaye",
+        "Academic Status": "Graduate",
+        Gender: "F",
+        Faculty: "SCIENCE",
+        Department: "Met & Mat Engineering",
+      },
+      {
+        ID: "160408006",
+        Name: "Michael Durojaye",
+        "Academic Status": "Undergraduate",
+        Gender: "M",
+        Faculty: "MGMT SCIENCE",
+        Department: "Met & Mat Engineering",
+      },
+      {
+        ID: "160408006",
+        Name: "Deliaj Hadeio",
+        "Academic Status": "Graduate",
+        Gender: "F",
+        Faculty: "ENGINEERING",
+        Department: "Met & Mat Engineering",
+      },
+      {
+        ID: "160403343",
+        Name: "Deliaj Hadeio",
+        "Academic Status": "Graduate",
+        Gender: "F",
+        Faculty: "SCIENCE",
+        Department: "Mechanical Engineering",
+      },
+      {
+        ID: "122345345",
+        Name: "Deliaj Hadeio",
+        "Academic Status": "Undergraduate",
+        Gender: "F",
+        Faculty: "MGMT SCIENCE",
+        Department: "Mechanical Engineering",
+      },
+      {
+        ID: "122345345",
+        Name: "Deliaj Hadeio",
+        "Academic Status": "Undergraduate",
+        Gender: "F",
+        Faculty: "ENGINEERING",
+        Department: "Mechanical Engineering",
+      },
+      {
+        ID: "122345345",
+        Name: "Deliaj Hadeio",
+        "Academic Status": "Undergraduate",
+        Gender: "F",
+        Faculty: "SCIENCE",
+        Department: "Computer Engineering",
+      },
+      {
+        ID: "122345345",
+        Name: "Phillip Mediloa",
+        "Academic Status": "Undergraduate",
+        Gender: "M",
+        Faculty: "MGMT SCIENCE",
+        Department: "Computer Engineering",
+      },
+      {
+        ID: "233545353",
+        Name: "Deliaj Hadeio",
+        "Academic Status": "Graduate",
+        Gender: "F",
+        Faculty: "ENGINEERING",
+        Department: "Computer Engineering",
+      },
+      {
+        ID: "233545353",
+        Name: "Phillip Mediloa",
+        "Academic Status": "Undergraduate",
+        Gender: "M",
+        Faculty: "SCIENCE",
+        Department: "Met & Mat Engineering",
+      },
+      {
+        ID: "233545353",
+        Name: "Phillip Mediloa",
+        "Academic Status": "Undergraduate",
+        Gender: "M",
+        Faculty: "MGMT SCIENCE",
+        Department: "Met & Mat Engineering",
+      },
+      {
+        ID: "233545353",
+        Name: "Phillip Mediloa",
+        "Academic Status": "Graduate",
+        Gender: "M",
+        Faculty: "ENGINEERING",
+        Department: "Met & Mat Engineering",
+      },
+    ],
+    []
+  );
 
   const [isProfileDrawerVisible, setProfileDrawerVisible] = useState(false);
   const [selectedProfile, setSelectedProfile] = useState<Profile>({
@@ -174,6 +175,7 @@ const TotalPeers = () => {
     Faculty: "",
     Department: "",
   });
+  const [studentId, setStudentId] = useState<string | null>(null);
 
   const transformedTotalPeersData = totalPeersData.map((profile) => ({
     //Used to change the 'type' of the data to fit what the onRowClick of the table component expects.
@@ -195,6 +197,8 @@ const TotalPeers = () => {
   };
 
   useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    setStudentId(params.get("studentId"));
     if (studentId) {
       // Find the student from the data
       const studentProfile = totalPeersData.find(
