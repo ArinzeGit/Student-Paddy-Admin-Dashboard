@@ -109,7 +109,7 @@ const Employers = () => {
     },
   ];
 
-  function getTop6(data: { [key: string]: any }[]) {
+  function getTop6(data: { [key: string]: number | string }[]) {
     return data.slice(0, 6); // Get the first 6 items
   }
 

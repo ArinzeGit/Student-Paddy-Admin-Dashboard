@@ -102,7 +102,7 @@ const SkillLibrary = () => {
     },
   ];
 
-  function getTop6Videos(data: { [key: string]: any }[]) {
+  function getTop6Videos(data: { [key: string]: number | string }[]) {
     return data.slice(0, 6); // Get the first 6 items
   }
 

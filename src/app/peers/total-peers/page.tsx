@@ -5,7 +5,7 @@ import Table from "@/components/Table";
 import { useEffect, useState } from "react";
 import ProfileDrawer from "@/components/ProfileDrawer";
 import { useSearchParams } from "next/navigation";
-interface Profile {
+export interface Profile {
   ID: string;
   Name: string;
   "Academic Status": string;
@@ -166,7 +166,14 @@ const TotalPeers = () => {
   ];
 
   const [isProfileDrawerVisible, setProfileDrawerVisible] = useState(false);
-  const [selectedProfile, setSelectedProfile] = useState<Profile | null>(null);
+  const [selectedProfile, setSelectedProfile] = useState<Profile>({
+    ID: "",
+    Name: "",
+    "Academic Status": "",
+    Gender: "",
+    Faculty: "",
+    Department: "",
+  });
 
   const handleRowClick = (rowData: any) => {
     setSelectedProfile(rowData); // Set the clicked row's data to be used in the ProfileDrawer

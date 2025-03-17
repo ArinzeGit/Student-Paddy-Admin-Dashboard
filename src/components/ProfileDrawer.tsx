@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Open_Sans } from "next/font/google";
 import { useState } from "react";
+import { Profile } from "@/app/peers/total-peers/page";
 
 // Set font configuration
 const openSans = Open_Sans({
@@ -12,7 +13,7 @@ const openSans = Open_Sans({
 interface ProfileDrawerProps {
   isVisible: boolean;
   onClose: () => void;
-  profileData: any; // Adjust the type according to your profile data structure
+  profileData: Profile;
 }
 
 const ProfileDrawer = ({

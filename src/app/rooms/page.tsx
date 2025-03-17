@@ -121,11 +121,11 @@ const Rooms = () => {
     },
   ];
 
-  function getTop5(data: { [key: string]: any }[]) {
+  function getTop5(data: { [key: string]: number | string }[]) {
     return data.slice(0, 5); // Get the first 5 items
   }
 
-  function getTop6(data: { [key: string]: any }[]) {
+  function getTop6(data: { [key: string]: number | string }[]) {
     return data.slice(0, 6); // Get the first 6 items
   }
 
