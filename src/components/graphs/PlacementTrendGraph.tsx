@@ -13,6 +13,7 @@ import {
   Filler,
   ChartOptions,
   TooltipItem,
+  ScriptableContext,
 } from "chart.js";
 import YearDropdown from "../YearDropdown";
 
@@ -49,10 +50,10 @@ const PlacementTrendGraph = () => {
       {
         label: "2022",
         data: [38, 45, 30, 110, 58, 52, 20, 140, 131, 167, 105, 155],
-        backgroundColor: (ctx: any) => {
+        backgroundColor: (ctx: ScriptableContext<"line">) => {
           const chart = ctx.chart;
           const { ctx: chartCtx, chartArea } = chart;
-          if (!chartArea) return null; // Wait until chart renders
+          if (!chartArea) return "rgba(80, 192, 153, 0)"; // Return transparent color if chart has not been rendered
 
           const gradient = chartCtx.createLinearGradient(
             0,
@@ -78,10 +79,10 @@ const PlacementTrendGraph = () => {
       {
         label: "2021",
         data: [0, 30, 40, 53, 58, 70, 60, 76, 80, 77, 83, 92],
-        backgroundColor: (ctx: any) => {
+        backgroundColor: (ctx: ScriptableContext<"line">) => {
           const chart = ctx.chart;
           const { ctx: chartCtx, chartArea } = chart;
-          if (!chartArea) return null; // Wait until chart renders
+          if (!chartArea) return "rgba(80, 192, 153, 0)"; // Return transparent color if chart has not been rendered
 
           const gradient = chartCtx.createLinearGradient(
             0,

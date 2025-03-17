@@ -13,6 +13,7 @@ import {
   Filler,
   ChartOptions,
   TooltipItem,
+  ScriptableContext,
 } from "chart.js";
 import MonthDropdown from "../MonthDropdown";
 
@@ -51,10 +52,10 @@ const ActivePeersGraph = () => {
         data: [
           600, 800, 500, 9000, 1000, 900, 400, 28000, 20000, 42000, 7500, 30000,
         ],
-        backgroundColor: (ctx: any) => {
+        backgroundColor: (ctx: ScriptableContext<"line">) => {
           const chart = ctx.chart;
           const { ctx: chartCtx, chartArea } = chart;
-          if (!chartArea) return null; // Wait until chart renders
+          if (!chartArea) return "rgba(80, 192, 153, 0)"; // Return transparent color if chart has not been rendered
 
           const gradient = chartCtx.createLinearGradient(
             0,
