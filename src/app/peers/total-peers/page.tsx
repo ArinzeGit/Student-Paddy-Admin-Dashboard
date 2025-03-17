@@ -205,7 +205,7 @@ const TotalPeers = () => {
         setProfileDrawerVisible(true); // Open the sidebar
       }
     }
-  }, [studentId]); // Run this effect whenever studentId changes
+  }, [studentId, totalPeersData]); // Run this effect whenever studentId changes
 
   return (
     <PeersLayout>

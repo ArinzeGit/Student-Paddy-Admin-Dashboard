@@ -146,7 +146,7 @@ const SectorWisePlacementGraph = () => {
 
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
-  }, []);
+  }, [SectorWisePlacementData]);
 
   return (
     <div className="w-[100%] h-[100%] bg-white rounded-[8px] p-[24px] flex flex-col">

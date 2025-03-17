@@ -112,7 +112,7 @@ const RevenueStreamGraph = () => {
 
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
-  }, []);
+  }, [RevenueStreamData]);
 
   return (
     <div className="w-full h-full bg-white rounded-[8px] p-[24px] pb-[57px]">
