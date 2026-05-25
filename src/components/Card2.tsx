@@ -13,7 +13,7 @@ const Card2 = ({ label, value, iconSrc, url }: Card2Props) => {
     <div className="min-h-[150px] bg-[white] rounded-[8px] p-[24px] font-roboto flex flex-col justify-between">
       <div className="flex items-start gap-[14px]">
         <Image src={iconSrc} alt="Card Icon" width={44} height={44} />
-        <div className=" font-[500]">
+        <div className=" font-[500] text-black">
           <p className="text-[16px] leading-[1.37] mb-[5px] tracking-1">
             {label}
           </p>
