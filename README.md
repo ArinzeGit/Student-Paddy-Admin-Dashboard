@@ -1,36 +1,71 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Student Paddy Admin Dashboard
 
-## Getting Started
+This is an admin dashboard for universities to track student career readiness on the Student Paddy digital campus. This project is a fully responsive web application built from scratch using Next.js 14. It showcases various UI features designed to provide a smooth user experience.
 
-First, run the development server:
+## Table of Contents
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- [Preview](#preview)
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Installation](#installation)
+- [Contact](#contact)
+- [License](#license)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Preview
+![Preview](public/student-paddy-admin-dashboard-preview.gif)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Features
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Responsive Design**: The website is optimized for all screen sizes, ensuring a great experience on both desktop and mobile devices.
+- **Smooth Navigation**: Intuitive navigation for easy access to all sections.
 
-## Learn More
+## Technologies Used
 
-To learn more about Next.js, take a look at the following resources:
+- [Next.js 14](https://nextjs.org/)
+- [React](https://reactjs.org/)
+- [TypeScript](https://www.typescriptlang.org/) - Programming language that extends JavaScript
+- [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+- [Tailwind CSS](https://tailwindcss.com/) - CSS framework
+- CSS custom properties
+- Semantic HTML5 markup
+- [Node.js](https://nodejs.org/) - JavaScript runtime environment
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Installation
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+To get started with this project locally, follow these steps:
 
-## Deploy on Vercel
+1. Clone the repository:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+   ```bash
+   git clone https://github.com/ArinzeGit/student-paddy-admin-dashboard.git
+   ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+2. Navigate into the project directory:
+
+   ```bash
+   cd student-paddy-admin-dashboard
+   ```
+
+3. Install the dependencies:
+
+   ```bash
+   npm install
+   ```
+
+4. Start the development server:
+
+   ```bash
+   npm run dev
+   ```
+
+5. Open your browser and visit [http://localhost:3000](http://localhost:3000) to view the application.
+
+## Contact
+
+If you have any questions or feedback, feel free to reach out:
+
+- Email: arinzeowoh@gmail.com
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
